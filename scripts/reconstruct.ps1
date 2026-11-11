@@ -40,6 +40,15 @@ try {
     $new = 'TileEntityBlock te = NativeBlockEntities.instantiate(teClass, pos, newState);'
     if ([regex]::Matches($source, [regex]::Escape($old)).Count -ne 1) { throw 'Unexpected placement source.' }
     [IO.File]::WriteAllText((Resolve-Path -LiteralPath $sourcePath), $source.Replace($old, $new), [Text.UTF8Encoding]::new($false))
+    $networkPath = Join-Path $javaOutput 'ic2/core/network/Ic2PayloadRegistration.java'
+    $networkSource = [IO.File]::ReadAllText((Resolve-Path -LiteralPath $networkPath))
+    $registration = 'event.registrar("26.3-1").executesOn(HandlerThread.NETWORK).playBidirectional(Ic2Payload.TYPE, Ic2Payload.CODEC, (packet, context) -> {'
+    $server = '(packet, context) -> context.enqueueWork(() -> IC2.network.get(true).receive(packet.bytes(), context.player()))'
+    if (-not $networkSource.Contains($registration) -or -not $networkSource.Contains("}, $server);")) { throw 'Unexpected network registration source.' }
+    $newline = if ($networkSource.Contains("`r`n")) { "`r`n" } else { "`n" }
+    $replacement = 'event.registrar("26.3-1").executesOn(HandlerThread.NETWORK).playBidirectional(Ic2Payload.TYPE, Ic2Payload.CODEC,' + $newline + '         ' + $server + ',' + $newline + '         (packet, context) -> {'
+    $networkSource = $networkSource.Replace($registration, $replacement).Replace("}, $server);", '});')
+    [IO.File]::WriteAllText((Resolve-Path -LiteralPath $networkPath), $networkSource, [Text.UTF8Encoding]::new($false))
     Write-Output "Reconstructed source and resources: $OutputDirectory/src"
 } finally {
     Pop-Location

@@ -40,6 +40,9 @@ public class AuditReconstruction {
         String source = Files.readString(Path.of("src/main/java/ic2/core/item/block/ItemBlockTileEntity.java"));
         if (!source.contains("NativeBlockEntities.instantiate(teClass, pos, newState)")
             || source.contains("TileEntityBlock.instantiate(teClass)")) throw new AssertionError("Source fix missing");
+        String network = Files.readString(Path.of("src/main/java/ic2/core/network/Ic2PayloadRegistration.java"));
+        if (network.indexOf("IC2.network.get(true)") > network.indexOf("SubPacketType.Rpc")
+            || !network.contains("IC2.network.get(false)")) throw new AssertionError("Network source fix missing");
         long actualSources;
         try (var files = Files.walk(Path.of("src/main/java/ic2"))) {
             actualSources = files.filter(p -> p.toString().endsWith(".java")).count();

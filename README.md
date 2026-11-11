@@ -2,8 +2,9 @@
 
 Vollständige Dekompilierung der veröffentlichten `ic2.0all.jar`:
 IC2 **2.8.222**, Minecraft **26.3**, NeoForge **26.3.0.101**.
-Der Fix für `Registry is already frozen` beim Platzieren von Maschinen
-ist im rekonstruierten Quellcode und im ausführbaren JAR-Patcher enthalten.
+Die Fixes für `Registry is already frozen` beim Platzieren von Maschinen
+und die vertauschten Netzwerk-Handler sind im rekonstruierten Quellcode
+und im ausführbaren JAR-Patcher enthalten.
 
 **Dies ist ein rekonstruiertes Quellarchiv, kein wiederhergestelltes Original-Entwicklungsprojekt.**
 Ein vollständiger Build der Mod aus diesen Java-Dateien ist nicht eingerichtet
@@ -21,6 +22,9 @@ oder in die Ausgabe übernommen.
   Trove-Bibliothek. Diese Bibliothek bleibt als Original-JAR erhalten.
 - `src/main/java/PatchPlacement.java`: eigenständiger JAR-Patcher (JDK 25).
 - `patches/placement-fix.diff`: lesbarer Fix.
+- `patches/network-routing-fix.diff`: Korrektur der Paketzuordnung.
+- `scripts/TestNetworkRouting.java`: Regressionstest mit dem echten Registrierungsbytecode
+  und minimalen API-Testdoubles.
 - `scripts/reconstruct.ps1`: reproduzierbare Dekompilierung und Anwendung des Fixes.
 - `scripts/AuditReconstruction.java`: Abdeckungs- und Ressourcenprüfung.
 - `docs/reconstruction-inventory.txt`: Liste der rekonstruierten Quelldateien.
@@ -38,19 +42,19 @@ herunterladen und unter `input/ic2.0all.jar` ablegen:
 Mit passendem `JAVA_HOME` kann `-JavaHome` entfallen. Auf anderen Systemen:
 
 ```text
-java src/main/java/PatchPlacement.java input/ic2.0all.jar dist/ic2.0all-placement-fix.jar
+java src/main/java/PatchPlacement.java input/ic2.0all.jar dist/ic2.0all-placement-network-fix.jar
 ```
 
 Die Ausgabe darf noch nicht existieren. Der Patcher akzeptiert ausschließlich
 die unveränderte Originaldatei mit SHA-256
 `815a1d6e192e6a18eb7ef213baece5e743005957107595983e4e6341ab1add34`.
 Er prüft den geänderten Bytecode und vergleicht alle JAR-Einträge:
-Nur `ItemBlockTileEntity.class` darf sich ändern.
+Nur `ItemBlockTileEntity.class` und `Ic2PayloadRegistration.class` dürfen sich ändern.
 
 ## Installation und Spieltest
 
 Minecraft beenden und die bisherige IC2-JAR im `mods`-Ordner durch
-`dist/ic2.0all-placement-fix.jar` ersetzen. Nur eine IC2-JAR gleichzeitig installieren.
+`dist/ic2.0all-placement-network-fix.jar` ersetzen. Nur eine IC2-JAR gleichzeitig installieren.
 In einer Testwelt BatBox und weitere Maschinen platzieren, speichern und neu laden.
 Ein Minecraft-Laufzeittest wurde hier noch nicht durchgeführt.
 
@@ -64,6 +68,21 @@ einen neuen `BlockEntityType` anzulegen.
 Der Fix verwendet `NativeBlockEntities.instantiate(teClass, pos, newState)`.
 Diese vorhandene Methode setzt den registrierten Typ, Position und Zustand
 und stellt den vorherigen ThreadLocal-Kontext im `finally`-Block wieder her.
+
+NeoForge 26.3 erwartet bei `playBidirectional` zuerst den Server-Handler und
+danach den Client-Handler. Die Portierung registriert sie umgekehrt. Dadurch
+verwirft IC2 unter anderem `LargePacket`-Updates und `KeyUpdate`-Pakete auf
+der jeweils falschen Seite; auch GUI-Pakete werden falsch zugestellt.
+Der zweite Fix vertauscht die Handler und erhält die spezielle RPC-Behandlung
+auf dem Netzwerkthread sowie das Einreihen anderer Pakete auf dem Hauptthread.
+
+```text
+java scripts/TestNetworkRouting.java dist/ic2.0all-placement-network-fix.jar
+```
+
+Der Test führt den Registrierungsbytecode aus der JAR aus. Er prüft beide Richtungen,
+GUI-/Maschinenpakete, RPC und die Hauptthread-Weiterleitung. Die Original-JAR
+scheitert an diesem Test, die korrigierte JAR besteht ihn. Dies ersetzt keinen Spieltest.
 
 ## Rekonstruktion reproduzieren und prüfen
 

@@ -10,6 +10,7 @@ import java.util.jar.*;
 /** Reproducible, dependency-free patch for the exact CurseForge release. Requires JDK 25. */
 public class PatchPlacement {
     static final String TARGET = "ic2/core/item/block/ItemBlockTileEntity.class";
+    static final String NETWORK_TARGET = "ic2/core/network/Ic2PayloadRegistration.class";
     static final String ORIGINAL_SHA256 = "815a1d6e192e6a18eb7ef213baece5e743005957107595983e4e6341ab1add34";
     static final String OLD = "(Ljava/lang/Class;)Lic2/core/block/TileEntityBlock;";
     static final String NEW = "(Ljava/lang/Class;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lic2/core/block/TileEntityBlock;";
@@ -57,6 +58,24 @@ public class PatchPlacement {
             if (changes[0] != 1) throw new IllegalStateException("Expected one placement call, found " + changes[0]);
             var errors = cf.verify(patched);
             if (!errors.isEmpty()) throw new IllegalStateException("Class verification failed: " + errors);
+            int[] networkChanges = {0};
+            byte[] networkOriginal = jar.getInputStream(jar.getJarEntry(NETWORK_TARGET)).readAllBytes();
+            byte[] networkPatched = cf.transformClass(cf.parse(networkOriginal), ClassTransform.transformingMethodBodies(
+                m -> m.methodName().equalsString("register"), (code, element) -> {
+                    if (element instanceof InvokeInstruction call
+                        && call.opcode() == Opcode.INVOKEVIRTUAL
+                        && call.owner().asInternalName().equals("net/neoforged/neoforge/network/registration/PayloadRegistrar")
+                        && call.name().equalsString("playBidirectional")) {
+                        // NeoForge 26.3 takes serverHandler first, clientHandler second.
+                        // Both references are category-one values; swap preserves lambda/RPC behavior.
+                        code.swap().with(call);
+                        networkChanges[0]++;
+                    } else code.with(element);
+                }));
+            if (networkChanges[0] != 1) throw new IllegalStateException("Expected one network registration");
+            var networkErrors = cf.verify(networkPatched);
+            if (!networkErrors.isEmpty()) throw new IllegalStateException("Network verification failed: " + networkErrors);
+            Map<String, byte[]> replacements = Map.of(TARGET, patched, NETWORK_TARGET, networkPatched);
             Files.createDirectories(output.toAbsolutePath().getParent());
             try (var out = new JarOutputStream(Files.newOutputStream(output, StandardOpenOption.CREATE_NEW))) {
                 for (var entries = jar.entries(); entries.hasMoreElements();) {
@@ -66,12 +85,12 @@ public class PatchPlacement {
                     JarEntry copy = new JarEntry(entry.getName());
                     copy.setTime(entry.getTime());
                     out.putNextEntry(copy);
-                    if (entry.getName().equals(TARGET)) out.write(patched);
+                    if (replacements.containsKey(entry.getName())) out.write(replacements.get(entry.getName()));
                     else try (var stream = jar.getInputStream(entry)) { stream.transferTo(out); }
                     out.closeEntry();
                 }
             }
-            // Compare every uncompressed entry; only the placement class may differ.
+            // Compare every uncompressed entry; only the two explicitly patched classes may differ.
             int changed = 0;
             try (JarFile result = new JarFile(output.toFile())) {
                 if (jar.size() != result.size()) throw new AssertionError("Entry count changed");
@@ -80,13 +99,13 @@ public class PatchPlacement {
                     byte[] before = jar.getInputStream(entry).readAllBytes();
                     byte[] after = result.getInputStream(result.getJarEntry(entry.getName())).readAllBytes();
                     if (!Arrays.equals(before, after)) {
-                        if (!entry.getName().equals(TARGET)) throw new AssertionError("Unexpected change: " + entry.getName());
+                        if (!replacements.containsKey(entry.getName())) throw new AssertionError("Unexpected change: " + entry.getName());
                         changed++;
                     }
                 }
             }
-            if (changed != 1) throw new AssertionError("Expected exactly one changed entry");
-            System.out.println("PASS: bytecode verification; exactly one placement call replaced; all other JAR entries unchanged.");
+            if (changed != replacements.size()) throw new AssertionError("Expected exactly two changed entries");
+            System.out.println("PASS: bytecode verification; placement and network routing patched; all other JAR entries unchanged.");
             System.out.println("Created " + output);
         }
     }

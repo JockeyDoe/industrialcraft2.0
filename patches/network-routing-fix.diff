@@ -1,0 +1,10 @@
+--- ic2/core/network/Ic2PayloadRegistration.java (decompiled original)
++++ ic2/core/network/Ic2PayloadRegistration.java (patched)
+@@
+-      event.registrar("26.3-1").executesOn(HandlerThread.NETWORK).playBidirectional(Ic2Payload.TYPE, Ic2Payload.CODEC, (packet, context) -> {
++      event.registrar("26.3-1").executesOn(HandlerThread.NETWORK).playBidirectional(Ic2Payload.TYPE, Ic2Payload.CODEC,
++         (packet, context) -> context.enqueueWork(() -> IC2.network.get(true).receive(packet.bytes(), context.player())),
++         (packet, context) -> {
+@@
+-      }, (packet, context) -> context.enqueueWork(() -> IC2.network.get(true).receive(packet.bytes(), context.player())));
++      });
