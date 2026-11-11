@@ -49,6 +49,24 @@ try {
     $replacement = 'event.registrar("26.3-1").executesOn(HandlerThread.NETWORK).playBidirectional(Ic2Payload.TYPE, Ic2Payload.CODEC,' + $newline + '         ' + $server + ',' + $newline + '         (packet, context) -> {'
     $networkSource = $networkSource.Replace($registration, $replacement).Replace("}, $server);", '});')
     [IO.File]::WriteAllText((Resolve-Path -LiteralPath $networkPath), $networkSource, [Text.UTF8Encoding]::new($false))
+    $guiPath = Join-Path $javaOutput 'ic2/core/GuiIC2.java'
+    $guiSource = [IO.File]::ReadAllText((Resolve-Path -LiteralPath $guiPath))
+    $oldGui = '      super.extractBackground(graphics, mouseX, mouseY, partialTick);' + $newline + '      this.func_146976_a(partialTick, mouseX, mouseY);'
+    $newGui = @(
+        '      GuiGraphicsExtractor previous = this.graphics;',
+        '      this.graphics = graphics;',
+        '      try {',
+        '         super.extractBackground(graphics, mouseX, mouseY, partialTick);',
+        '         this.func_146976_a(partialTick, mouseX, mouseY);',
+        '      } finally {',
+        '         this.graphics = previous;',
+        '         if (previous == null) {',
+        '            GuiTextures.clear();',
+        '         }',
+        '      }'
+    ) -join $newline
+    if (-not $guiSource.Contains($oldGui)) { throw 'Unexpected GUI background source.' }
+    [IO.File]::WriteAllText((Resolve-Path -LiteralPath $guiPath), $guiSource.Replace($oldGui, $newGui), [Text.UTF8Encoding]::new($false))
     Write-Output "Reconstructed source and resources: $OutputDirectory/src"
 } finally {
     Pop-Location

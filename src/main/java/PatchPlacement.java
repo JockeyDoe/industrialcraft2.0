@@ -11,6 +11,49 @@ import java.util.jar.*;
 public class PatchPlacement {
     static final String TARGET = "ic2/core/item/block/ItemBlockTileEntity.class";
     static final String NETWORK_TARGET = "ic2/core/network/Ic2PayloadRegistration.class";
+    static final String GUI_TARGET = "ic2/core/GuiIC2.class";
+
+    static byte[] patchGui(ClassFile cf, byte[] original) {
+        ClassDesc owner = ClassDesc.of("ic2.core.GuiIC2");
+        ClassDesc graphics = ClassDesc.of("net.minecraft.client.gui.GuiGraphicsExtractor");
+        String descriptor = "(Lnet/minecraft/client/gui/GuiGraphicsExtractor;IIF)V";
+        int[] count = {0};
+        byte[] patched = cf.transformClass(cf.parse(original), (builder, element) -> {
+            if (element instanceof MethodModel method && method.methodName().equalsString("extractBackground")
+                && method.methodType().equalsString(descriptor)) {
+                count[0]++;
+                // Retain the original instructions as a private body; bind graphics around the whole hook.
+                builder.withMethod("ic2$extractBackgroundBody", MethodTypeDesc.ofDescriptor(descriptor),
+                    ClassFile.ACC_PRIVATE, mb -> method.forEach(mb::with));
+                builder.withMethodBody("extractBackground", MethodTypeDesc.ofDescriptor(descriptor),
+                    method.flags().flagsMask(), code -> {
+                        int previous = code.allocateLocal(TypeKind.REFERENCE);
+                        int failure = code.allocateLocal(TypeKind.REFERENCE);
+                        code.aload(0).getfield(owner, "graphics", graphics).astore(previous);
+                        code.aload(0).aload(1).putfield(owner, "graphics", graphics);
+                        code.trying(body -> body.aload(0).aload(1).iload(2).iload(3).fload(4)
+                            .invokespecial(owner, "ic2$extractBackgroundBody", MethodTypeDesc.ofDescriptor(descriptor)),
+                            catches -> catches.catchingAll(handler -> {
+                                handler.astore(failure);
+                                restoreGui(handler, owner, graphics, previous);
+                                handler.aload(failure).athrow();
+                            }));
+                        restoreGui(code, owner, graphics, previous);
+                        code.return_();
+                    });
+            } else builder.with(element);
+        });
+        if (count[0] != 1) throw new IllegalStateException("Expected exactly one GUI background hook");
+        return patched;
+    }
+
+    static void restoreGui(CodeBuilder code, ClassDesc owner, ClassDesc graphics, int previous) {
+        code.aload(0).aload(previous).putfield(owner, "graphics", graphics);
+        var done = code.newLabel();
+        code.aload(previous).ifnonnull(done);
+        code.invokestatic(ClassDesc.of("ic2.core.gui.GuiTextures"), "clear", MethodTypeDesc.ofDescriptor("()V"));
+        code.labelBinding(done);
+    }
     static final String ORIGINAL_SHA256 = "815a1d6e192e6a18eb7ef213baece5e743005957107595983e4e6341ab1add34";
     static final String OLD = "(Ljava/lang/Class;)Lic2/core/block/TileEntityBlock;";
     static final String NEW = "(Ljava/lang/Class;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lic2/core/block/TileEntityBlock;";
@@ -75,7 +118,9 @@ public class PatchPlacement {
             if (networkChanges[0] != 1) throw new IllegalStateException("Expected one network registration");
             var networkErrors = cf.verify(networkPatched);
             if (!networkErrors.isEmpty()) throw new IllegalStateException("Network verification failed: " + networkErrors);
-            Map<String, byte[]> replacements = Map.of(TARGET, patched, NETWORK_TARGET, networkPatched);
+            byte[] guiPatched = patchGui(cf, jar.getInputStream(jar.getJarEntry(GUI_TARGET)).readAllBytes());
+            // The isolated GUI regression test verifies/executes these methods with API test doubles.
+            Map<String, byte[]> replacements = Map.of(TARGET, patched, NETWORK_TARGET, networkPatched, GUI_TARGET, guiPatched);
             Files.createDirectories(output.toAbsolutePath().getParent());
             try (var out = new JarOutputStream(Files.newOutputStream(output, StandardOpenOption.CREATE_NEW))) {
                 for (var entries = jar.entries(); entries.hasMoreElements();) {
@@ -104,8 +149,8 @@ public class PatchPlacement {
                     }
                 }
             }
-            if (changed != replacements.size()) throw new AssertionError("Expected exactly two changed entries");
-            System.out.println("PASS: bytecode verification; placement and network routing patched; all other JAR entries unchanged.");
+            if (changed != replacements.size()) throw new AssertionError("Expected exactly three changed entries");
+            System.out.println("PASS: placement/network bytecode verification; placement, network and GUI patched; all other JAR entries unchanged.");
             System.out.println("Created " + output);
         }
     }

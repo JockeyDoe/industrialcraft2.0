@@ -87,8 +87,17 @@ public abstract class GuiIC2<T extends ContainerBase<? extends Container>> exten
    }
 
    public void extractBackground(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
-      super.extractBackground(graphics, mouseX, mouseY, partialTick);
-      this.func_146976_a(partialTick, mouseX, mouseY);
+      GuiGraphicsExtractor previous = this.graphics;
+      this.graphics = graphics;
+      try {
+         super.extractBackground(graphics, mouseX, mouseY, partialTick);
+         this.func_146976_a(partialTick, mouseX, mouseY);
+      } finally {
+         this.graphics = previous;
+         if (previous == null) {
+            GuiTextures.clear();
+         }
+      }
    }
 
    public int getGuiLeft() {

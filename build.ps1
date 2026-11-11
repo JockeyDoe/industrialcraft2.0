@@ -1,6 +1,6 @@
 param(
     [string]$InputJar = 'investigation/ic2.0all.jar',
-    [string]$OutputJar = 'dist/ic2.0all-placement-network-fix.jar',
+    [string]$OutputJar = 'dist/ic2.0all-placement-network-gui-fix.jar',
     [string]$JavaHome = $env:JAVA_HOME
 )
 
