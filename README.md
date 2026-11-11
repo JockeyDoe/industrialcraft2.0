@@ -3,7 +3,8 @@
 Vollständige Dekompilierung der veröffentlichten `ic2.0all.jar`:
 IC2 **2.8.222**, Minecraft **26.3**, NeoForge **26.3.0.101**.
 Die Fixes für `Registry is already frozen` beim Platzieren von Maschinen
-und die vertauschten Netzwerk-Handler sowie der GUI-Zeichenkontext sind im rekonstruierten Quellcode
+und die vertauschten Netzwerk-Handler, der GUI-Zeichenkontext und die Synchronisierung
+der Blockzustände sind im rekonstruierten Quellcode
 und im ausführbaren JAR-Patcher enthalten.
 
 **Dies ist ein rekonstruiertes Quellarchiv, kein wiederhergestelltes Original-Entwicklungsprojekt.**
@@ -24,6 +25,7 @@ oder in die Ausgabe übernommen.
 - `patches/placement-fix.diff`: lesbarer Fix.
 - `patches/network-routing-fix.diff`: Korrektur der Paketzuordnung.
 - `patches/gui-extraction-fix.diff`: Zeichenkontext für den separat aufgerufenen GUI-Hintergrund.
+- `scripts/TestBlockStateSync.java`: Prüfung der Weltzustands-Synchronisierung und ihrer vier Aufrufstellen.
 - `scripts/TestGuiExtraction.java`: Ausführung der tatsächlichen GUI-Methoden mit API-Testdoubles.
 - `scripts/TestNetworkRouting.java`: Regressionstest mit dem echten Registrierungsbytecode
   und minimalen API-Testdoubles.
@@ -44,19 +46,20 @@ herunterladen und unter `input/ic2.0all.jar` ablegen:
 Mit passendem `JAVA_HOME` kann `-JavaHome` entfallen. Auf anderen Systemen:
 
 ```text
-java src/main/java/PatchPlacement.java input/ic2.0all.jar dist/ic2.0all-placement-network-gui-fix.jar
+java src/main/java/PatchPlacement.java input/ic2.0all.jar dist/ic2.0all-render-state-fix.jar
 ```
 
 Die Ausgabe darf noch nicht existieren. Der Patcher akzeptiert ausschließlich
 die unveränderte Originaldatei mit SHA-256
 `815a1d6e192e6a18eb7ef213baece5e743005957107595983e4e6341ab1add34`.
 Er prüft den geänderten Bytecode und vergleicht alle JAR-Einträge:
-Nur `ItemBlockTileEntity.class`, `Ic2PayloadRegistration.class` und `GuiIC2.class` dürfen sich ändern.
+Nur `ItemBlockTileEntity.class`, `Ic2PayloadRegistration.class`, `GuiIC2.class`
+und `TileEntityBlock.class` dürfen sich ändern.
 
 ## Installation und Spieltest
 
 Minecraft beenden und die bisherige IC2-JAR im `mods`-Ordner durch
-`dist/ic2.0all-placement-network-gui-fix.jar` ersetzen. Nur eine IC2-JAR gleichzeitig installieren.
+`dist/ic2.0all-render-state-fix.jar` ersetzen. Nur eine IC2-JAR gleichzeitig installieren.
 In einer Testwelt BatBox und weitere Maschinen platzieren, speichern und neu laden.
 Ein Minecraft-Laufzeittest wurde hier noch nicht durchgeführt.
 
@@ -79,7 +82,7 @@ Der zweite Fix vertauscht die Handler und erhält die spezielle RPC-Behandlung
 auf dem Netzwerkthread sowie das Einreihen anderer Pakete auf dem Hauptthread.
 
 ```text
-java scripts/TestNetworkRouting.java dist/ic2.0all-placement-network-gui-fix.jar
+java scripts/TestNetworkRouting.java dist/ic2.0all-render-state-fix.jar
 ```
 
 Der Test führt den Registrierungsbytecode aus der JAR aus. Er prüft beide Richtungen,
@@ -93,13 +96,30 @@ räumt Texturzustand nur nach einem eigenständigen Aufruf auf. Der Schutz gegen
 Zeichnen außerhalb einer Renderphase bleibt erhalten.
 
 ```text
-java scripts/TestGuiExtraction.java dist/ic2.0all-placement-network-gui-fix.jar
+java scripts/TestGuiExtraction.java dist/ic2.0all-render-state-fix.jar
 ```
 
 Der GUI-Test übernimmt die tatsächlichen Methoden aus der JAR in eine isolierte
 Testklasse. Er prüft eigenständige und verschachtelte Hintergrundaufrufe sowie
 Aufräumen und Weitergabe von Zeichenfehlern. Andere GUI-Methoden werden dabei
 nicht ausgeführt; ein kompletter Minecraft-Spieltest bleibt erforderlich.
+
+Die Welt behält ursprünglich nach dem Platzieren `facing=down`, obwohl die
+BlockEntity eine horizontale Richtung speichert. Der State-Mapper weist diesen
+ungültigen Richtungen das unsichtbare Air-Modell zu. Nur eine Renderbenachrichtigung
+ändert den Weltzustand nicht. Der vierte Fix synchronisiert deshalb den berechneten
+Blockzustand bei Richtungs-/Aktivitätsänderung, beim Laden und vor dem Neuzeichnen.
+Er verändert nur die Zustände des weiterhin passenden IC2-Blocks und ersetzt
+weder fremde Blöcke noch BlockEntities. Bereits platzierte Maschinen werden beim
+erneuten Laden beziehungsweise durch eintreffende Netzwerkupdates aktualisiert.
+
+```text
+java scripts/TestBlockStateSync.java dist/ic2.0all-render-state-fix.jar
+```
+
+Der Test führt die neuen Synchronisierungs- und Renderbenachrichtigungs-Methoden
+aus der JAR gegen eine minimale Welt-Testdouble aus und prüft alle vier Aufrufstellen.
+Eine Minecraft-Renderingprüfung ist darin nicht enthalten.
 
 ## Rekonstruktion reproduzieren und prüfen
 

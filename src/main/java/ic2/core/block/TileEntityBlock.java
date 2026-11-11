@@ -266,6 +266,7 @@ public abstract class TileEntityBlock extends BlockEntity implements INetworkDat
                }
             }
          }
+         this.syncBlockState();
       }
    }
 
@@ -824,6 +825,7 @@ public abstract class TileEntityBlock extends BlockEntity implements INetworkDat
          throw new IllegalArgumentException("invalid facing: " + facing + ", supported: " + this.getSupportedFacings());
       } else {
          this.facing = (byte)facing.ordinal();
+         this.syncBlockState();
          if (!this.getLevel().isClientSide()) {
             IC2.network.get(true).updateTileEntityField(this, "facing");
          }
@@ -837,6 +839,7 @@ public abstract class TileEntityBlock extends BlockEntity implements INetworkDat
    public void setActive(boolean active) {
       if (this.active != active) {
          this.active = active;
+         this.syncBlockState();
          IC2.network.get(true).updateTileEntityField(this, "active");
       }
    }
@@ -924,8 +927,16 @@ public abstract class TileEntityBlock extends BlockEntity implements INetworkDat
    }
 
    protected final void rerender() {
+      this.syncBlockState();
       BlockState state = this.getBlockState();
       this.getLevel().sendBlockUpdated(this.getBlockPos(), state, state, 2);
+   }
+
+   private void syncBlockState() {
+      Level world = this.getLevel();
+      if (world != null && world.getBlockState(this.getBlockPos()).getBlock() == this.getBlockType()) {
+         world.setBlock(this.getBlockPos(), this.getBlockState(), 2);
+      }
    }
 
    protected boolean clientNeedsExtraModelInfo() {

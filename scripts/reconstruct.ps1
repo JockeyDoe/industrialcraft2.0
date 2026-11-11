@@ -67,6 +67,33 @@ try {
     ) -join $newline
     if (-not $guiSource.Contains($oldGui)) { throw 'Unexpected GUI background source.' }
     [IO.File]::WriteAllText((Resolve-Path -LiteralPath $guiPath), $guiSource.Replace($oldGui, $newGui), [Text.UTF8Encoding]::new($false))
+    $statePath = Join-Path $javaOutput 'ic2/core/block/TileEntityBlock.java'
+    $stateSource = [IO.File]::ReadAllText((Resolve-Path -LiteralPath $statePath))
+    foreach ($assignment in @('this.facing = (byte)facing.ordinal();', 'this.active = active;')) {
+        if (-not $stateSource.Contains($assignment)) { throw 'Unexpected machine state source.' }
+        $stateSource = $stateSource.Replace($assignment, $assignment + $newline + '         this.syncBlockState();')
+    }
+    $stateSource = $stateSource.Replace('   protected final void rerender() {', '   protected final void rerender() {' + $newline + '      this.syncBlockState();')
+    $loadStart = $stateSource.IndexOf('   protected void onLoaded() {')
+    $loadEnd = $stateSource.IndexOf('   protected void onUnloaded() {')
+    if ($loadStart -lt 0 -or $loadEnd -le $loadStart) { throw 'Unexpected machine load source.' }
+    $loadBody = $stateSource.Substring($loadStart, $loadEnd - $loadStart)
+    $oldEnd = '      }' + $newline + '   }' + $newline
+    if (-not $loadBody.Contains($oldEnd)) { throw 'Unexpected machine load end.' }
+    $loadBody = $loadBody.Replace($oldEnd, '         this.syncBlockState();' + $newline + $oldEnd)
+    $stateSource = $stateSource.Substring(0, $loadStart) + $loadBody + $stateSource.Substring($loadEnd)
+    $helper = @(
+        '   private void syncBlockState() {',
+        '      Level world = this.getLevel();',
+        '      if (world != null && world.getBlockState(this.getBlockPos()).getBlock() == this.getBlockType()) {',
+        '         world.setBlock(this.getBlockPos(), this.getBlockState(), 2);',
+        '      }',
+        '   }',
+        '',
+        ''
+    ) -join $newline
+    $stateSource = $stateSource.Replace('   protected boolean clientNeedsExtraModelInfo() {', $helper + '   protected boolean clientNeedsExtraModelInfo() {')
+    [IO.File]::WriteAllText((Resolve-Path -LiteralPath $statePath), $stateSource, [Text.UTF8Encoding]::new($false))
     Write-Output "Reconstructed source and resources: $OutputDirectory/src"
 } finally {
     Pop-Location

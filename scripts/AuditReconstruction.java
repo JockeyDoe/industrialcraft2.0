@@ -46,6 +46,9 @@ public class AuditReconstruction {
         String gui = Files.readString(Path.of("src/main/java/ic2/core/GuiIC2.java"));
         if (!gui.contains("GuiGraphicsExtractor previous = this.graphics;")
             || !gui.contains("this.graphics = previous;")) throw new AssertionError("GUI source fix missing");
+        String machine = Files.readString(Path.of("src/main/java/ic2/core/block/TileEntityBlock.java"));
+        if (machine.split("this\\.syncBlockState\\(\\);", -1).length != 5)
+            throw new AssertionError("Block state synchronization hooks missing");
         long actualSources;
         try (var files = Files.walk(Path.of("src/main/java/ic2"))) {
             actualSources = files.filter(p -> p.toString().endsWith(".java")).count();

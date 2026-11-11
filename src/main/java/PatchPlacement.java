@@ -1,6 +1,7 @@
 import java.io.*;
 import java.lang.classfile.*;
 import java.lang.classfile.instruction.InvokeInstruction;
+import java.lang.classfile.instruction.FieldInstruction;
 import java.lang.constant.*;
 import java.nio.file.*;
 import java.security.MessageDigest;
@@ -12,6 +13,57 @@ public class PatchPlacement {
     static final String TARGET = "ic2/core/item/block/ItemBlockTileEntity.class";
     static final String NETWORK_TARGET = "ic2/core/network/Ic2PayloadRegistration.class";
     static final String GUI_TARGET = "ic2/core/GuiIC2.class";
+    static final String STATE_TARGET = "ic2/core/block/TileEntityBlock.class";
+
+    static byte[] patchBlockState(ClassFile cf, byte[] original) {
+        ClassDesc owner = ClassDesc.of("ic2.core.block.TileEntityBlock");
+        ClassDesc world = ClassDesc.of("net.minecraft.world.level.Level");
+        ClassDesc pos = ClassDesc.of("net.minecraft.core.BlockPos");
+        ClassDesc state = ClassDesc.of("net.minecraft.world.level.block.state.BlockState");
+        ClassDesc block = ClassDesc.of("net.minecraft.world.level.block.Block");
+        MethodTypeDesc empty = MethodTypeDesc.ofDescriptor("()V");
+        Map<String, Integer> changes = new HashMap<>();
+        var transform = ClassTransform.transformingMethods(m -> Set.of("setFacing", "setActive", "onLoaded", "rerender")
+            .contains(m.methodName().stringValue()), (builder, element) -> {
+                if (element instanceof CodeModel codeModel) {
+                    String name = codeModel.parent().orElseThrow().methodName().stringValue();
+                    boolean[] first = {true};
+                    builder.transformCode(codeModel, (code, instruction) -> {
+                        if ((name.equals("rerender") && first[0])
+                            || (name.equals("onLoaded") && instruction instanceof Instruction ins && ins.opcode() == Opcode.RETURN)) {
+                            code.aload(0).invokespecial(owner, "syncBlockState", empty);
+                            changes.merge(name, 1, Integer::sum);
+                        }
+                        first[0] = false;
+                        code.with(instruction);
+                        if (instruction instanceof FieldInstruction field && field.opcode() == Opcode.PUTFIELD
+                            && ((name.equals("setFacing") && field.name().equalsString("facing"))
+                                || (name.equals("setActive") && field.name().equalsString("active")))) {
+                            code.aload(0).invokespecial(owner, "syncBlockState", empty);
+                            changes.merge(name, 1, Integer::sum);
+                        }
+                    });
+                } else builder.with(element);
+            });
+        byte[] patched = cf.transformClass(cf.parse(original), transform.andThen(ClassTransform.endHandler(builder ->
+            builder.withMethodBody("syncBlockState", empty, ClassFile.ACC_PRIVATE, code -> {
+                var done = code.newLabel();
+                code.aload(0).invokevirtual(owner, "getLevel", MethodTypeDesc.of(world)).astore(1);
+                code.aload(1).ifnull(done);
+                code.aload(1).aload(0).invokevirtual(owner, "getBlockPos", MethodTypeDesc.of(pos))
+                    .invokevirtual(world, "getBlockState", MethodTypeDesc.of(state, pos))
+                    .invokevirtual(state, "getBlock", MethodTypeDesc.of(block));
+                code.aload(0).invokevirtual(owner, "getBlockType", MethodTypeDesc.of(ClassDesc.of("ic2.core.block.BlockTileEntity")))
+                    .if_acmpne(done);
+                code.aload(1).aload(0).invokevirtual(owner, "getBlockPos", MethodTypeDesc.of(pos))
+                    .aload(0).invokevirtual(owner, "getBlockState", MethodTypeDesc.of(state)).iconst_2()
+                    .invokevirtual(world, "setBlock", MethodTypeDesc.of(ConstantDescs.CD_boolean, pos, state, ConstantDescs.CD_int)).pop();
+                code.labelBinding(done).return_();
+            }))));
+        if (!changes.equals(Map.of("setFacing", 1, "setActive", 1, "onLoaded", 1, "rerender", 1)))
+            throw new IllegalStateException("Unexpected state synchronization hooks: " + changes);
+        return patched;
+    }
 
     static byte[] patchGui(ClassFile cf, byte[] original) {
         ClassDesc owner = ClassDesc.of("ic2.core.GuiIC2");
@@ -120,7 +172,8 @@ public class PatchPlacement {
             if (!networkErrors.isEmpty()) throw new IllegalStateException("Network verification failed: " + networkErrors);
             byte[] guiPatched = patchGui(cf, jar.getInputStream(jar.getJarEntry(GUI_TARGET)).readAllBytes());
             // The isolated GUI regression test verifies/executes these methods with API test doubles.
-            Map<String, byte[]> replacements = Map.of(TARGET, patched, NETWORK_TARGET, networkPatched, GUI_TARGET, guiPatched);
+            byte[] statePatched = patchBlockState(cf, jar.getInputStream(jar.getJarEntry(STATE_TARGET)).readAllBytes());
+            Map<String, byte[]> replacements = Map.of(TARGET, patched, NETWORK_TARGET, networkPatched, GUI_TARGET, guiPatched, STATE_TARGET, statePatched);
             Files.createDirectories(output.toAbsolutePath().getParent());
             try (var out = new JarOutputStream(Files.newOutputStream(output, StandardOpenOption.CREATE_NEW))) {
                 for (var entries = jar.entries(); entries.hasMoreElements();) {
@@ -149,8 +202,8 @@ public class PatchPlacement {
                     }
                 }
             }
-            if (changed != replacements.size()) throw new AssertionError("Expected exactly three changed entries");
-            System.out.println("PASS: placement/network bytecode verification; placement, network and GUI patched; all other JAR entries unchanged.");
+            if (changed != replacements.size()) throw new AssertionError("Expected exactly four changed entries");
+            System.out.println("PASS: placement/network bytecode verification; placement, network, GUI and block states patched; all other JAR entries unchanged.");
             System.out.println("Created " + output);
         }
     }
