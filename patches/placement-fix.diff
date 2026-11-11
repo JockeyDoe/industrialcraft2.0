@@ -1,0 +1,6 @@
+--- ic2/core/item/block/ItemBlockTileEntity.java (decompiled original)
++++ ic2/core/item/block/ItemBlockTileEntity.java (patched)
+@@
+-               TileEntityBlock te = TileEntityBlock.instantiate(teClass);
++               TileEntityBlock te = NativeBlockEntities.instantiate(teClass, pos, newState);
+                return placeTeBlock(stack, player, world, pos, side, te);
