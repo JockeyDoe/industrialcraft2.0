@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/water",
+  "textures": {
+    "particle": "ic2:blocks/fluid/pahoehoe_lava_still"
+  }
+}

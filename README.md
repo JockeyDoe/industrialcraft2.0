@@ -1,84 +1,103 @@
-# IC2 26.3: Fix für den Absturz beim Platzieren
+﻿# IndustrialCraft 2.0 – rekonstruierte Quellen mit Platzierungsfix
 
-Gezielter Binärpatch für `ic2.0all.jar` (CurseForge-Datei 9072436,
-IC2 2.8.222, Minecraft 26.3 / NeoForge).
+Vollständige Dekompilierung der veröffentlichten `ic2.0all.jar`:
+IC2 **2.8.222**, Minecraft **26.3**, NeoForge **26.3.0.101**.
+Der Fix für `Registry is already frozen` beim Platzieren von Maschinen
+ist im rekonstruierten Quellcode und im ausführbaren JAR-Patcher enthalten.
 
-Dieses Repository enthält den ausführbaren Patch-Quellcode, kein vollständiges
-IC2-Quellprojekt. Es benötigt weder Gradle noch externe Java-Bibliotheken.
+**Dies ist ein rekonstruiertes Quellarchiv, kein wiederhergestelltes Original-Entwicklungsprojekt.**
+Ein vollständiger Build der Mod aus diesen Java-Dateien ist nicht eingerichtet
+oder nachgewiesen. Der geprüfte Build unten patcht die Original-JAR.
+Änderungen an anderen dekompilierten Klassen werden dadurch nicht kompiliert
+oder in die Ausgabe übernommen.
 
-## Projektstruktur
+## Inhalt
 
-- `src/main/java/PatchPlacement.java`: Patcher und Bytecode-/Integritätsprüfung.
-- `build.ps1`: Build-Aufruf für PowerShell mit frei wählbarem JDK und JAR-Pfaden.
-- `patches/placement-fix.diff`: lesbare Darstellung der Mod-Änderung.
-- `dist/`: lokal erzeugte gepatchte Mod (von Git ausgeschlossen).
+- `src/main/java/ic2/`: 1.253 rekonstruierte Java-Dateien für sämtliche
+  1.870 direkt in der Mod enthaltenen Klassen, einschließlich innerer Klassen,
+  API, Integrationen und eingebetteter EJML-Klassen.
+- `src/main/resources/`: alle 3.603 Originalressourcen, einschließlich
+  Texturen, Modellen, Rezepten, Konfigurationen, Metadaten und der verschachtelten
+  Trove-Bibliothek. Diese Bibliothek bleibt als Original-JAR erhalten.
+- `src/main/java/PatchPlacement.java`: eigenständiger JAR-Patcher (JDK 25).
+- `patches/placement-fix.diff`: lesbarer Fix.
+- `scripts/reconstruct.ps1`: reproduzierbare Dekompilierung und Anwendung des Fixes.
+- `scripts/AuditReconstruction.java`: Abdeckungs- und Ressourcenprüfung.
+- `docs/reconstruction-inventory.txt`: Liste der rekonstruierten Quelldateien.
 
-## Nach dem Klonen
+## Gepatchte Mod bauen
 
-JDK 25 installieren. Die Originaldatei `ic2.0all.jar` selbst von
-[CurseForge](https://www.curseforge.com/minecraft/mc-mods/industrialcraft-2-0/files/9072436)
-herunterladen und unter `input/ic2.0all.jar` ablegen. Anschließend:
+JDK 25 installieren. Die Originaldatei von
+[CurseForge, Datei 9072436](https://www.curseforge.com/minecraft/mc-mods/industrialcraft-2-0/files/9072436)
+herunterladen und unter `input/ic2.0all.jar` ablegen:
 
 ```powershell
 ./build.ps1 -InputJar input/ic2.0all.jar -JavaHome 'C:/Pfad/zum/jdk-25'
 ```
 
-Mit passendem `JAVA_HOME` kann `-JavaHome` entfallen. Alternativ lässt sich
-der Quellcode auf jedem Betriebssystem direkt mit JDK 25 ausführen:
+Mit passendem `JAVA_HOME` kann `-JavaHome` entfallen. Auf anderen Systemen:
 
 ```text
 java src/main/java/PatchPlacement.java input/ic2.0all.jar dist/ic2.0all-placement-fix.jar
 ```
 
-Originaldatei, Decompiler, dekompilierte Mod-Dateien und erzeugte JARs werden
-über `.gitignore` ausgeschlossen. Für einen Upload werden nur der eigene
-Patcher, das Build-Skript, der kleine Änderungsdiff und die Dokumentation benötigt.
-
-## Installation
-
-Minecraft beenden. Die bisherige `ic2.0all.jar` aus dem `mods`-Ordner
-verschieben und durch `dist/ic2.0all-placement-fix.jar` ersetzen.
-Nur eine IC2-JAR gleichzeitig installieren. Vor dem Test die Welt sichern.
-
-## Ursache und Änderung
-
-`ItemBlockTileEntity.placeBlockAt` ruft den alten reflektierenden Konstruktor
-ohne den von der Portierung vorgesehenen Konstruktionskontext auf.
-Dadurch versucht `constructionType()` beim ersten Platzieren, einen neuen
-`BlockEntityType` in der bereits eingefrorenen Registry anzulegen.
-
-Der Patch nutzt stattdessen die bereits vorhandene Methode
-`NativeBlockEntities.instantiate(teClass, pos, newState)`. Diese verwendet
-den registrierten Typ, setzt Position und Zustand und stellt den vorherigen
-ThreadLocal-Kontext in einem `finally`-Block wieder her.
-Es werden keine Registrierungen hinzugefügt oder Registry-Sperren umgangen.
-
-Die lesbare Änderung steht in `patches/placement-fix.diff`.
-Die mit Vineflower rekonstruierten Dateien in `investigation/decompiled`
-sind Analyseartefakte, kein vollständiges, kompilierbares Mod-Projekt.
-
-## Reproduzieren
-
-JDK 25 benötigt; keine Minecraft- oder NeoForge-Build-Abhängigkeiten:
-
-```powershell
-./build.ps1 -JavaHome 'C:/Pfad/zum/jdk-25'
-```
-
-Der Ausgabepfad muss noch frei sein. Der Patcher akzeptiert ausschließlich
+Die Ausgabe darf noch nicht existieren. Der Patcher akzeptiert ausschließlich
 die unveränderte Originaldatei mit SHA-256
 `815a1d6e192e6a18eb7ef213baece5e743005957107595983e4e6341ab1add34`.
-Er ersetzt genau einen Methodenaufruf in genau einer Klasse.
+Er prüft den geänderten Bytecode und vergleicht alle JAR-Einträge:
+Nur `ItemBlockTileEntity.class` darf sich ändern.
 
-## Prüfung und Grenzen
+## Installation und Spieltest
 
-- JDK-Classfile-Verifikation des gepatchten Bytecodes erfolgreich.
-  Die benötigten externen Vererbungsbeziehungen sind im Patcher explizit
-  angegeben; Minecraft selbst ist dabei nicht geladen.
-- Alle anderen entpackten JAR-Einträge sind bytegleich zur Originaldatei.
-- Kein Minecraft-Laufzeittest durchgeführt.
+Minecraft beenden und die bisherige IC2-JAR im `mods`-Ordner durch
+`dist/ic2.0all-placement-fix.jar` ersetzen. Nur eine IC2-JAR gleichzeitig installieren.
+In einer Testwelt BatBox und weitere Maschinen platzieren, speichern und neu laden.
+Ein Minecraft-Laufzeittest wurde hier noch nicht durchgeführt.
 
-Im Spiel zuerst BatBox und weitere Maschinen platzieren, anschließend
-Welt speichern und neu laden. Auch auf einem dedizierten Server testen,
-falls die Mod dort eingesetzt werden soll. Der Patch behebt den konkreten
-Platzierungspfad; weitere Fehler dieser Portierung wurden nicht geprüft.
+## Ursache und Fix
+
+`ItemBlockTileEntity.placeBlockAt` erzeugt die Maschine ursprünglich über
+`TileEntityBlock.instantiate(teClass)` ohne den vorgesehenen Konstruktionskontext.
+`constructionType()` versucht dadurch, nach dem Einfrieren der Registry
+einen neuen `BlockEntityType` anzulegen.
+
+Der Fix verwendet `NativeBlockEntities.instantiate(teClass, pos, newState)`.
+Diese vorhandene Methode setzt den registrierten Typ, Position und Zustand
+und stellt den vorherigen ThreadLocal-Kontext im `finally`-Block wieder her.
+
+## Rekonstruktion reproduzieren und prüfen
+
+```powershell
+./scripts/reconstruct.ps1 -InputJar input/ic2.0all.jar -JavaHome 'C:/Pfad/zum/jdk-25'
+```
+
+Das Skript lädt bei Bedarf Vineflower **1.11.2** von Maven Central und prüft
+dessen SHA-256. Die neue Ausgabe liegt unter `build/reconstructed/src`;
+vorhandene Repository-Quellen werden nicht überschrieben.
+
+Die eingecheckten Quellen und Ressourcen mit JDK 25 prüfen:
+
+```text
+java scripts/AuditReconstruction.java input/ic2.0all.jar
+```
+
+Die Prüfung vergleicht Ressourcen byteweise und kontrolliert für jede Klasse
+deren `SourceFile`-Attribut sowie das Vorhandensein des Quellcode-Fixes.
+Sie beweist weder die Kompilierbarkeit noch die semantische Gleichheit aller
+dekompilierten Methoden. Vineflower meldete bei der Rekonstruktion keine Warnungen.
+
+Für einen echten Quellbuild fehlen insbesondere die ursprüngliche Build-Konfiguration
+und die Wiederherstellung des vollständigen Abhängigkeits-/Access-Transformer-Setups.
+Decompiler-Ausgaben können zusätzliche Korrekturen an Typen und Kontrollfluss benötigen.
+
+## Herkunft und Lizenzangaben
+
+Die Quellen wurden aus der oben genannten veröffentlichten Mod rekonstruiert.
+Originalkommentare, Versionshistorie und ursprüngliche Build-Dateien lassen sich
+daraus nicht zurückgewinnen. Dieses Repository ist kein offizielles IC2-Repository.
+Die ursprünglichen Autoren- und Lizenzangaben in den Mod-Metadaten wurden unverändert
+übernommen; `META-INF/neoforge.mods.toml` nennt `All Rights Reserved`.
+Es wird keine neue Lizenz für fremde Quellen oder Ressourcen vergeben.
+
+Original- und Ausgabe-JARs sowie lokale Analyseartefakte werden von Git ausgeschlossen.
+Die mitgelieferte Trove-Ressource ist die ausdrücklich ausgenommene verschachtelte JAR.

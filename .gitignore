@@ -35,6 +35,7 @@ bin/
 /input/
 /build/
 *.jar
+!src/main/resources/META-INF/jarjar/*.jar
 *.class
 .idea/
 *.iml

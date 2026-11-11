@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "ic2:batpack"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "ic2:batpack"
+      }
+    ]
+  }
+}

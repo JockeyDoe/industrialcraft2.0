@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "type\u003dpipe": {
+      "model": "ic2:block/machine/resource/mining_pipe"
+    },
+    "type\u003dtip": {
+      "model": "ic2:block/machine/resource/mining_pipe_tip"
+    }
+  }
+}

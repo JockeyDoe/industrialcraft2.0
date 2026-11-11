@@ -1,0 +1,189 @@
+package ic2.core.util;
+
+import java.util.HashSet;
+import java.util.Set;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.BlockPos.MutableBlockPos;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.FluidState;
+
+public class PumpUtil {
+   private static int moveUp(Level world, MutableBlockPos pos) {
+      pos.set(pos.getX(), pos.getY() + 1, pos.getZ());
+      int newDecay = getFlowDecay(world, pos);
+      if (newDecay >= 0) {
+         return newDecay;
+      } else {
+         pos.set(pos.getX() + 1, pos.getY(), pos.getZ());
+         newDecay = getFlowDecay(world, pos);
+         if (newDecay >= 0) {
+            return newDecay;
+         } else {
+            pos.set(pos.getX() - 2, pos.getY(), pos.getZ());
+            newDecay = getFlowDecay(world, pos);
+            if (newDecay >= 0) {
+               return newDecay;
+            } else {
+               pos.set(pos.getX() + 1, pos.getY(), pos.getZ() + 1);
+               newDecay = getFlowDecay(world, pos);
+               if (newDecay >= 0) {
+                  return newDecay;
+               } else {
+                  pos.set(pos.getX(), pos.getY(), pos.getZ() - 2);
+                  newDecay = getFlowDecay(world, pos);
+                  if (newDecay >= 0) {
+                     return newDecay;
+                  } else {
+                     pos.set(pos.getX(), pos.getY() - 1, pos.getZ() + 1);
+                     return -1;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   private static int moveSideways(Level world, MutableBlockPos pos, int decay) {
+      pos.set(pos.getX() - 1, pos.getY(), pos.getZ());
+      int newDecay = getFlowDecay(world, pos);
+      if (newDecay >= 0 && newDecay < decay) {
+         return newDecay;
+      } else {
+         pos.set(pos.getX() + 1, pos.getY(), pos.getZ() + 1);
+         newDecay = getFlowDecay(world, pos);
+         if (newDecay >= 0 && newDecay < decay) {
+            return newDecay;
+         } else {
+            pos.set(pos.getX(), pos.getY(), pos.getZ() - 2);
+            newDecay = getFlowDecay(world, pos);
+            if (newDecay >= 0 && newDecay < decay) {
+               return newDecay;
+            } else {
+               pos.set(pos.getX() + 1, pos.getY(), pos.getZ() + 1);
+               newDecay = getFlowDecay(world, pos);
+               if (newDecay >= 0 && newDecay < decay) {
+                  return newDecay;
+               } else {
+                  pos.set(pos.getX() - 1, pos.getY(), pos.getZ());
+                  return -1;
+               }
+            }
+         }
+      }
+   }
+
+   public static BlockPos searchFluidSource(Level world, BlockPos startPos) {
+      MutableBlockPos pos = new MutableBlockPos();
+      pos.set(startPos.getX(), startPos.getY(), startPos.getZ());
+      int decay = getFlowDecay(world, pos);
+
+      for (int i = 0; i < 64; i++) {
+         int newDecay = moveUp(world, pos);
+         if (newDecay < 0) {
+            newDecay = moveSideways(world, pos, decay);
+            if (newDecay < 0) {
+               break;
+            }
+         }
+
+         decay = newDecay;
+      }
+
+      Set<BlockPos> visited = new HashSet<>(64);
+
+      for (int i = 0; i < 64; i++) {
+         visited.add(pos.immutable());
+         pos.set(pos.getX() - 1, pos.getY(), pos.getZ());
+         if (!visited.contains(pos)) {
+            int newDecay = getFlowDecay(world, pos);
+            if (newDecay >= 0) {
+               if (newDecay == 0) {
+                  return pos;
+               }
+               continue;
+            }
+         }
+
+         pos.set(pos.getX() + 1, pos.getY(), pos.getZ() + 1);
+         if (!visited.contains(pos)) {
+            int newDecay = getFlowDecay(world, pos);
+            if (newDecay >= 0) {
+               if (newDecay == 0) {
+                  return pos;
+               }
+               continue;
+            }
+         }
+
+         pos.set(pos.getX(), pos.getY(), pos.getZ() - 2);
+         if (!visited.contains(pos)) {
+            int newDecay = getFlowDecay(world, pos);
+            if (newDecay >= 0) {
+               if (newDecay == 0) {
+                  return pos;
+               }
+               continue;
+            }
+         }
+
+         pos.set(pos.getX() + 1, pos.getY(), pos.getZ() + 1);
+         if (!visited.contains(pos)) {
+            int newDecay = getFlowDecay(world, pos);
+            if (newDecay >= 0) {
+               if (newDecay == 0) {
+                  return pos;
+               }
+               continue;
+            }
+         }
+
+         pos.set(pos.getX() - 1, pos.getY(), pos.getZ());
+         break;
+      }
+
+      MutableBlockPos cPos = new MutableBlockPos();
+
+      for (int ix = -2; ix <= 2; ix++) {
+         for (int iz = -2; iz <= 2; iz++) {
+            cPos.set(pos.getX() + ix, pos.getY(), pos.getZ() + iz);
+            BlockState state = world.getBlockState(cPos);
+            decay = getFlowDecay(state, world, cPos);
+            if (decay >= 0) {
+               if (decay == 0) {
+                  return cPos;
+               }
+
+               if (decay >= 1 && decay < 7 && state.getBlock() instanceof LiquidBlock) {
+                  world.setBlock(cPos, (BlockState)state.setValue(LiquidBlock.LEVEL, decay + 1), 3);
+               } else {
+                  world.removeBlock(cPos, false);
+               }
+            }
+         }
+      }
+
+      return null;
+   }
+
+   protected static int getFlowDecay(Level world, BlockPos pos) {
+      BlockState state = world.getBlockState(pos);
+      return getFlowDecay(state, world, pos);
+   }
+
+   protected static int getFlowDecay(BlockState state, Level world, BlockPos pos) {
+      FluidState fluid = state.getFluidState();
+      return fluid.isEmpty() ? -1 : (fluid.isSource() ? 0 : 7 - Util.limit(Math.round(6.0F * fluid.getOwnHeight()), 0, 6));
+   }
+
+   protected static boolean isExistInArray(int x, int y, int z, int[][] xyz, int end_i) {
+      for (int i = 0; i <= end_i; i++) {
+         if (xyz[i][0] == x && xyz[i][1] == y && xyz[i][2] == z) {
+            return true;
+         }
+      }
+
+      return false;
+   }
+}

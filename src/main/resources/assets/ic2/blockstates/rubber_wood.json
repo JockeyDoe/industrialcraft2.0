@@ -1,0 +1,46 @@
+{
+  "variants": {
+    "state\u003dplain_y": {
+      "model": "ic2:block/resource/rubber_wood"
+    },
+    "state\u003dplain_x": {
+      "model": "ic2:block/resource/rubber_wood",
+      "x": 90,
+      "y": 90
+    },
+    "state\u003dplain_z": {
+      "model": "ic2:block/resource/rubber_wood",
+      "x": 90
+    },
+    "state\u003ddry_north": {
+      "model": "ic2:block/resource/rubber_wood_dry"
+    },
+    "state\u003ddry_south": {
+      "model": "ic2:block/resource/rubber_wood_dry",
+      "y": 180
+    },
+    "state\u003ddry_west": {
+      "model": "ic2:block/resource/rubber_wood_dry",
+      "y": 270
+    },
+    "state\u003ddry_east": {
+      "model": "ic2:block/resource/rubber_wood_dry",
+      "y": 90
+    },
+    "state\u003dwet_north": {
+      "model": "ic2:block/resource/rubber_wood_wet"
+    },
+    "state\u003dwet_south": {
+      "model": "ic2:block/resource/rubber_wood_wet",
+      "y": 180
+    },
+    "state\u003dwet_west": {
+      "model": "ic2:block/resource/rubber_wood_wet",
+      "y": 270
+    },
+    "state\u003dwet_east": {
+      "model": "ic2:block/resource/rubber_wood_wet",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,33 @@
+package ic2.core.block.state;
+
+public class UnlistedIntegerProperty extends UnlistedProperty<Integer> {
+   private final String name;
+
+   public UnlistedIntegerProperty(String name) {
+      super(name, Integer.class);
+      this.name = name;
+   }
+
+   @Override
+   public String getName() {
+      return this.name;
+   }
+
+   public boolean isValid(Integer value) {
+      return true;
+   }
+
+   @Override
+   public Class<Integer> getType() {
+      return Integer.class;
+   }
+
+   public String valueToString(Integer value) {
+      return value.toString();
+   }
+
+   @Override
+   public String toString() {
+      return this.getClass().getSimpleName() + "{name=" + this.name + "}";
+   }
+}

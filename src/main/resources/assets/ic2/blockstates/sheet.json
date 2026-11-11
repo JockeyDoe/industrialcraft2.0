@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type\u003dresin": {
+      "model": "ic2:block/resin_sheet"
+    },
+    "type\u003drubber": {
+      "model": "ic2:block/rubber_sheet"
+    },
+    "type\u003dwool": {
+      "model": "ic2:block/wool_sheet"
+    }
+  }
+}

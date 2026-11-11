@@ -1,0 +1,48 @@
+{
+  "variants": {
+    "facing\u003dup,linked\u003dfalse": {
+      "model": "ic2:block/explosive/dynamite"
+    },
+    "facing\u003dup,linked\u003dtrue": {
+      "model": "ic2:block/explosive/dynamite_remote"
+    },
+    "facing\u003deast,linked\u003dfalse": {
+      "model": "ic2:block/explosive/dynamite_wall"
+    },
+    "facing\u003deast,linked\u003dtrue": {
+      "model": "ic2:block/explosive/dynamite_remote_wall"
+    },
+    "facing\u003dsouth,linked\u003dfalse": {
+      "model": "ic2:block/explosive/dynamite_wall",
+      "y": 90
+    },
+    "facing\u003dsouth,linked\u003dtrue": {
+      "model": "ic2:block/explosive/dynamite_remote_wall",
+      "y": 90
+    },
+    "facing\u003dwest,linked\u003dfalse": {
+      "model": "ic2:block/explosive/dynamite_wall",
+      "y": 180
+    },
+    "facing\u003dwest,linked\u003dtrue": {
+      "model": "ic2:block/explosive/dynamite_remote_wall",
+      "y": 180
+    },
+    "facing\u003dnorth,linked\u003dfalse": {
+      "model": "ic2:block/explosive/dynamite_wall",
+      "y": 270
+    },
+    "facing\u003dnorth,linked\u003dtrue": {
+      "model": "ic2:block/explosive/dynamite_remote_wall",
+      "y": 270
+    },
+    "facing\u003ddown,linked\u003dfalse": {
+      "model": "ic2:block/explosive/dynamite",
+      "x": 180
+    },
+    "facing\u003ddown,linked\u003dtrue": {
+      "model": "ic2:block/explosive/dynamite_remote",
+      "x": 180
+    }
+  }
+}

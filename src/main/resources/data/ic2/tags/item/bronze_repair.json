@@ -1,0 +1,10 @@
+{
+  "values": [
+    "ic2:ingot",
+    {
+      "id": "#c:ingots/bronze",
+      "required": false
+    }
+  ],
+  "replace": false
+}

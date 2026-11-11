@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/water",
+  "textures": {
+    "particle": "ic2:blocks/fluid/heavy_water_still"
+  }
+}

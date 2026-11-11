@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "type\u003dnormal": {
+      "model": "ic2:block/cf/foam"
+    },
+    "type\u003dreinforced": {
+      "model": "ic2:block/cf/reinforced_foam"
+    }
+  }
+}

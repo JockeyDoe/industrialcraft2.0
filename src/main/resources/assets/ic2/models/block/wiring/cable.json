@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/block",
+  "elements": [],
+  "textures": {
+    "particle": "ic2:blocks/wiring/cable/copper_cable_0"
+  }
+}

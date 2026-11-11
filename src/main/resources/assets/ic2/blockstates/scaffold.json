@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "type\u003dwood": {
+      "model": "ic2:block/wood_scaffold"
+    },
+    "type\u003dreinforced_wood": {
+      "model": "ic2:block/reinforced_wood_scaffold"
+    },
+    "type\u003diron": {
+      "model": "ic2:block/iron_scaffold"
+    },
+    "type\u003dreinforced_iron": {
+      "model": "ic2:block/reinforced_iron_scaffold"
+    }
+  }
+}

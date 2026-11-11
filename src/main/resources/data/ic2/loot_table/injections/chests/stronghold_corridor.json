@@ -1,0 +1,125 @@
+{
+  "pools": [
+    {
+      "name": "ic2",
+      "rolls": {
+        "min": 1,
+        "max": 3,
+        "type": "minecraft:uniform"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ic2:ingot",
+          "weight": 9,
+          "modifier": [
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "min": 2,
+                "max": 6,
+                "type": "minecraft:uniform"
+              }
+            },
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{\"ic2:variant\":2}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ic2:ingot",
+          "weight": 8,
+          "modifier": [
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 5,
+                "type": "minecraft:uniform"
+              }
+            },
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{\"ic2:variant\":6}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ic2:misc_resource",
+          "weight": 1,
+          "modifier": [
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 4,
+                "type": "minecraft:uniform"
+              }
+            },
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{\"ic2:variant\":1}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ic2:misc_resource",
+          "weight": 8,
+          "modifier": [
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "min": 4,
+                "max": 14,
+                "type": "minecraft:uniform"
+              }
+            },
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": "{\"ic2:variant\":2}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ic2:bronze_pickaxe",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ic2:bronze_sword",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ic2:bronze_helmet",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ic2:bronze_chestplate",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ic2:bronze_leggings",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ic2:bronze_boots",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 44
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:chest"
+}

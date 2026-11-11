@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "type\u003dbasalt": {
+      "model": "ic2:block/resource/basalt"
+    },
+    "type\u003dcopper_ore": {
+      "model": "ic2:block/resource/copper_ore"
+    },
+    "type\u003dlead_ore": {
+      "model": "ic2:block/resource/lead_ore"
+    },
+    "type\u003dtin_ore": {
+      "model": "ic2:block/resource/tin_ore"
+    },
+    "type\u003duranium_ore": {
+      "model": "ic2:block/resource/uranium_ore"
+    },
+    "type\u003dbronze_block": {
+      "model": "ic2:block/resource/bronze_block"
+    },
+    "type\u003dcopper_block": {
+      "model": "ic2:block/resource/copper_block"
+    },
+    "type\u003dlead_block": {
+      "model": "ic2:block/resource/lead_block"
+    },
+    "type\u003dsilver_block": {
+      "model": "ic2:block/resource/silver_block"
+    },
+    "type\u003dsteel_block": {
+      "model": "ic2:block/resource/steel_block"
+    },
+    "type\u003dtin_block": {
+      "model": "ic2:block/resource/tin_block"
+    },
+    "type\u003duranium_block": {
+      "model": "ic2:block/resource/uranium_block"
+    },
+    "type\u003dreinforced_stone": {
+      "model": "ic2:block/resource/reinforced_stone"
+    },
+    "type\u003dmachine": {
+      "model": "ic2:block/resource/machine"
+    },
+    "type\u003dadvanced_machine": {
+      "model": "ic2:block/resource/advanced_machine"
+    },
+    "type\u003dreactor_vessel": {
+      "model": "ic2:block/generator/reactor/reactor_vessel"
+    }
+  }
+}

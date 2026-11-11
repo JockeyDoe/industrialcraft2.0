@@ -1,0 +1,4199 @@
+{
+  "variants": {
+    "type\u003dinvalid,facing\u003ddown": {
+      "model": "minecraft:block/air",
+      "x": 90
+    },
+    "type\u003dinvalid,facing\u003dup": {
+      "model": "minecraft:block/air",
+      "x": 270
+    },
+    "type\u003dinvalid,facing\u003dnorth": {
+      "model": "minecraft:block/air"
+    },
+    "type\u003dinvalid,facing\u003dsouth": {
+      "model": "minecraft:block/air",
+      "y": 180
+    },
+    "type\u003dinvalid,facing\u003dwest": {
+      "model": "minecraft:block/air",
+      "y": 270
+    },
+    "type\u003dinvalid,facing\u003deast": {
+      "model": "minecraft:block/air",
+      "y": 90
+    },
+    "type\u003dbarrel,facing\u003ddown": {
+      "model": "ic2:block/barrel",
+      "x": 90
+    },
+    "type\u003dbarrel,facing\u003dup": {
+      "model": "ic2:block/barrel",
+      "x": 270
+    },
+    "type\u003dbarrel,facing\u003dnorth": {
+      "model": "ic2:block/barrel"
+    },
+    "type\u003dbarrel,facing\u003dsouth": {
+      "model": "ic2:block/barrel",
+      "y": 180
+    },
+    "type\u003dbarrel,facing\u003dwest": {
+      "model": "ic2:block/barrel",
+      "y": 270
+    },
+    "type\u003dbarrel,facing\u003deast": {
+      "model": "ic2:block/barrel",
+      "y": 90
+    },
+    "type\u003dbarrel_active,facing\u003ddown": {
+      "model": "ic2:block/barrel_tap",
+      "x": 90
+    },
+    "type\u003dbarrel_active,facing\u003dup": {
+      "model": "ic2:block/barrel_tap",
+      "x": 270
+    },
+    "type\u003dbarrel_active,facing\u003dnorth": {
+      "model": "ic2:block/barrel_tap"
+    },
+    "type\u003dbarrel_active,facing\u003dsouth": {
+      "model": "ic2:block/barrel_tap",
+      "y": 180
+    },
+    "type\u003dbarrel_active,facing\u003dwest": {
+      "model": "ic2:block/barrel_tap",
+      "y": 270
+    },
+    "type\u003dbarrel_active,facing\u003deast": {
+      "model": "ic2:block/barrel_tap",
+      "y": 90
+    },
+    "type\u003dwall,facing\u003ddown": {
+      "model": "ic2:block/cf/wall",
+      "x": 90
+    },
+    "type\u003dwall,facing\u003dup": {
+      "model": "ic2:block/cf/wall",
+      "x": 270
+    },
+    "type\u003dwall,facing\u003dnorth": {
+      "model": "ic2:block/cf/wall"
+    },
+    "type\u003dwall,facing\u003dsouth": {
+      "model": "ic2:block/cf/wall",
+      "y": 180
+    },
+    "type\u003dwall,facing\u003dwest": {
+      "model": "ic2:block/cf/wall",
+      "y": 270
+    },
+    "type\u003dwall,facing\u003deast": {
+      "model": "ic2:block/cf/wall",
+      "y": 90
+    },
+    "type\u003ditnt,facing\u003ddown": {
+      "model": "ic2:block/explosive/itnt",
+      "x": 90
+    },
+    "type\u003ditnt,facing\u003dup": {
+      "model": "ic2:block/explosive/itnt",
+      "x": 270
+    },
+    "type\u003ditnt,facing\u003dnorth": {
+      "model": "ic2:block/explosive/itnt"
+    },
+    "type\u003ditnt,facing\u003dsouth": {
+      "model": "ic2:block/explosive/itnt",
+      "y": 180
+    },
+    "type\u003ditnt,facing\u003dwest": {
+      "model": "ic2:block/explosive/itnt",
+      "y": 270
+    },
+    "type\u003ditnt,facing\u003deast": {
+      "model": "ic2:block/explosive/itnt",
+      "y": 90
+    },
+    "type\u003dnuke,facing\u003ddown": {
+      "model": "ic2:block/explosive/nuke",
+      "x": 90
+    },
+    "type\u003dnuke,facing\u003dup": {
+      "model": "ic2:block/explosive/nuke",
+      "x": 270
+    },
+    "type\u003dnuke,facing\u003dnorth": {
+      "model": "ic2:block/explosive/nuke"
+    },
+    "type\u003dnuke,facing\u003dsouth": {
+      "model": "ic2:block/explosive/nuke",
+      "y": 180
+    },
+    "type\u003dnuke,facing\u003dwest": {
+      "model": "ic2:block/explosive/nuke",
+      "y": 270
+    },
+    "type\u003dnuke,facing\u003deast": {
+      "model": "ic2:block/explosive/nuke",
+      "y": 90
+    },
+    "type\u003dgenerator,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/generator",
+      "x": 90
+    },
+    "type\u003dgenerator,facing\u003dup": {
+      "model": "ic2:block/generator/electric/generator",
+      "x": 270
+    },
+    "type\u003dgenerator,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/generator"
+    },
+    "type\u003dgenerator,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/generator",
+      "y": 180
+    },
+    "type\u003dgenerator,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/generator",
+      "y": 270
+    },
+    "type\u003dgenerator,facing\u003deast": {
+      "model": "ic2:block/generator/electric/generator",
+      "y": 90
+    },
+    "type\u003dgenerator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/generator_active",
+      "x": 90
+    },
+    "type\u003dgenerator_active,facing\u003dup": {
+      "model": "ic2:block/generator/electric/generator_active",
+      "x": 270
+    },
+    "type\u003dgenerator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/generator_active"
+    },
+    "type\u003dgenerator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/generator_active",
+      "y": 180
+    },
+    "type\u003dgenerator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/generator_active",
+      "y": 270
+    },
+    "type\u003dgenerator_active,facing\u003deast": {
+      "model": "ic2:block/generator/electric/generator_active",
+      "y": 90
+    },
+    "type\u003dgeo_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/geo_generator",
+      "x": 90
+    },
+    "type\u003dgeo_generator,facing\u003dup": {
+      "model": "ic2:block/generator/electric/geo_generator",
+      "x": 270
+    },
+    "type\u003dgeo_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/geo_generator"
+    },
+    "type\u003dgeo_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/geo_generator",
+      "y": 180
+    },
+    "type\u003dgeo_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/geo_generator",
+      "y": 270
+    },
+    "type\u003dgeo_generator,facing\u003deast": {
+      "model": "ic2:block/generator/electric/geo_generator",
+      "y": 90
+    },
+    "type\u003dgeo_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/geo_generator_active",
+      "x": 90
+    },
+    "type\u003dgeo_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/electric/geo_generator_active",
+      "x": 270
+    },
+    "type\u003dgeo_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/geo_generator_active"
+    },
+    "type\u003dgeo_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/geo_generator_active",
+      "y": 180
+    },
+    "type\u003dgeo_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/geo_generator_active",
+      "y": 270
+    },
+    "type\u003dgeo_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/electric/geo_generator_active",
+      "y": 90
+    },
+    "type\u003dkinetic_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/kinetic_generator",
+      "x": 90
+    },
+    "type\u003dkinetic_generator,facing\u003dup": {
+      "model": "ic2:block/generator/electric/kinetic_generator",
+      "x": 270
+    },
+    "type\u003dkinetic_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/kinetic_generator"
+    },
+    "type\u003dkinetic_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/kinetic_generator",
+      "y": 180
+    },
+    "type\u003dkinetic_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/kinetic_generator",
+      "y": 270
+    },
+    "type\u003dkinetic_generator,facing\u003deast": {
+      "model": "ic2:block/generator/electric/kinetic_generator",
+      "y": 90
+    },
+    "type\u003dkinetic_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/kinetic_generator_active",
+      "x": 90
+    },
+    "type\u003dkinetic_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/electric/kinetic_generator_active",
+      "x": 270
+    },
+    "type\u003dkinetic_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/kinetic_generator_active"
+    },
+    "type\u003dkinetic_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/kinetic_generator_active",
+      "y": 180
+    },
+    "type\u003dkinetic_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/kinetic_generator_active",
+      "y": 270
+    },
+    "type\u003dkinetic_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/electric/kinetic_generator_active",
+      "y": 90
+    },
+    "type\u003drt_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/rt_generator",
+      "x": 90
+    },
+    "type\u003drt_generator,facing\u003dup": {
+      "model": "ic2:block/generator/electric/rt_generator",
+      "x": 270
+    },
+    "type\u003drt_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/rt_generator"
+    },
+    "type\u003drt_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/rt_generator",
+      "y": 180
+    },
+    "type\u003drt_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/rt_generator",
+      "y": 270
+    },
+    "type\u003drt_generator,facing\u003deast": {
+      "model": "ic2:block/generator/electric/rt_generator",
+      "y": 90
+    },
+    "type\u003drt_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/rt_generator_active",
+      "x": 90
+    },
+    "type\u003drt_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/electric/rt_generator_active",
+      "x": 270
+    },
+    "type\u003drt_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/rt_generator_active"
+    },
+    "type\u003drt_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/rt_generator_active",
+      "y": 180
+    },
+    "type\u003drt_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/rt_generator_active",
+      "y": 270
+    },
+    "type\u003drt_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/electric/rt_generator_active",
+      "y": 90
+    },
+    "type\u003dsemifluid_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/semifluid_generator",
+      "x": 90
+    },
+    "type\u003dsemifluid_generator,facing\u003dup": {
+      "model": "ic2:block/generator/electric/semifluid_generator",
+      "x": 270
+    },
+    "type\u003dsemifluid_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/semifluid_generator"
+    },
+    "type\u003dsemifluid_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/semifluid_generator",
+      "y": 180
+    },
+    "type\u003dsemifluid_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/semifluid_generator",
+      "y": 270
+    },
+    "type\u003dsemifluid_generator,facing\u003deast": {
+      "model": "ic2:block/generator/electric/semifluid_generator",
+      "y": 90
+    },
+    "type\u003dsemifluid_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/semifluid_generator_active",
+      "x": 90
+    },
+    "type\u003dsemifluid_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/electric/semifluid_generator_active",
+      "x": 270
+    },
+    "type\u003dsemifluid_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/semifluid_generator_active"
+    },
+    "type\u003dsemifluid_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/semifluid_generator_active",
+      "y": 180
+    },
+    "type\u003dsemifluid_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/semifluid_generator_active",
+      "y": 270
+    },
+    "type\u003dsemifluid_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/electric/semifluid_generator_active",
+      "y": 90
+    },
+    "type\u003dsolar_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/solar_generator",
+      "x": 90
+    },
+    "type\u003dsolar_generator,facing\u003dup": {
+      "model": "ic2:block/generator/electric/solar_generator",
+      "x": 270
+    },
+    "type\u003dsolar_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/solar_generator"
+    },
+    "type\u003dsolar_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/solar_generator",
+      "y": 180
+    },
+    "type\u003dsolar_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/solar_generator",
+      "y": 270
+    },
+    "type\u003dsolar_generator,facing\u003deast": {
+      "model": "ic2:block/generator/electric/solar_generator",
+      "y": 90
+    },
+    "type\u003dsolar_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/solar_generator",
+      "x": 90
+    },
+    "type\u003dsolar_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/electric/solar_generator",
+      "x": 270
+    },
+    "type\u003dsolar_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/solar_generator"
+    },
+    "type\u003dsolar_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/solar_generator",
+      "y": 180
+    },
+    "type\u003dsolar_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/solar_generator",
+      "y": 270
+    },
+    "type\u003dsolar_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/electric/solar_generator",
+      "y": 90
+    },
+    "type\u003dstirling_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/stirling_generator",
+      "x": 90
+    },
+    "type\u003dstirling_generator,facing\u003dup": {
+      "model": "ic2:block/generator/electric/stirling_generator",
+      "x": 270
+    },
+    "type\u003dstirling_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/stirling_generator"
+    },
+    "type\u003dstirling_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/stirling_generator",
+      "y": 180
+    },
+    "type\u003dstirling_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/stirling_generator",
+      "y": 270
+    },
+    "type\u003dstirling_generator,facing\u003deast": {
+      "model": "ic2:block/generator/electric/stirling_generator",
+      "y": 90
+    },
+    "type\u003dstirling_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/stirling_generator_active",
+      "x": 90
+    },
+    "type\u003dstirling_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/electric/stirling_generator_active",
+      "x": 270
+    },
+    "type\u003dstirling_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/stirling_generator_active"
+    },
+    "type\u003dstirling_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/stirling_generator_active",
+      "y": 180
+    },
+    "type\u003dstirling_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/stirling_generator_active",
+      "y": 270
+    },
+    "type\u003dstirling_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/electric/stirling_generator_active",
+      "y": 90
+    },
+    "type\u003dwater_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/water_generator",
+      "x": 90
+    },
+    "type\u003dwater_generator,facing\u003dup": {
+      "model": "ic2:block/generator/electric/water_generator",
+      "x": 270
+    },
+    "type\u003dwater_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/water_generator"
+    },
+    "type\u003dwater_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/water_generator",
+      "y": 180
+    },
+    "type\u003dwater_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/water_generator",
+      "y": 270
+    },
+    "type\u003dwater_generator,facing\u003deast": {
+      "model": "ic2:block/generator/electric/water_generator",
+      "y": 90
+    },
+    "type\u003dwater_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/water_generator",
+      "x": 90
+    },
+    "type\u003dwater_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/electric/water_generator",
+      "x": 270
+    },
+    "type\u003dwater_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/water_generator"
+    },
+    "type\u003dwater_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/water_generator",
+      "y": 180
+    },
+    "type\u003dwater_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/water_generator",
+      "y": 270
+    },
+    "type\u003dwater_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/electric/water_generator",
+      "y": 90
+    },
+    "type\u003dwind_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/wind_generator",
+      "x": 90
+    },
+    "type\u003dwind_generator,facing\u003dup": {
+      "model": "ic2:block/generator/electric/wind_generator",
+      "x": 270
+    },
+    "type\u003dwind_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/wind_generator"
+    },
+    "type\u003dwind_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/wind_generator",
+      "y": 180
+    },
+    "type\u003dwind_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/wind_generator",
+      "y": 270
+    },
+    "type\u003dwind_generator,facing\u003deast": {
+      "model": "ic2:block/generator/electric/wind_generator",
+      "y": 90
+    },
+    "type\u003dwind_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/wind_generator",
+      "x": 90
+    },
+    "type\u003dwind_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/electric/wind_generator",
+      "x": 270
+    },
+    "type\u003dwind_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/wind_generator"
+    },
+    "type\u003dwind_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/wind_generator",
+      "y": 180
+    },
+    "type\u003dwind_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/wind_generator",
+      "y": 270
+    },
+    "type\u003dwind_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/electric/wind_generator",
+      "y": 90
+    },
+    "type\u003delectric_heat_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/heat/electric_heat_generator",
+      "x": 90
+    },
+    "type\u003delectric_heat_generator,facing\u003dup": {
+      "model": "ic2:block/generator/heat/electric_heat_generator",
+      "x": 270
+    },
+    "type\u003delectric_heat_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/heat/electric_heat_generator"
+    },
+    "type\u003delectric_heat_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/heat/electric_heat_generator",
+      "y": 180
+    },
+    "type\u003delectric_heat_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/heat/electric_heat_generator",
+      "y": 270
+    },
+    "type\u003delectric_heat_generator,facing\u003deast": {
+      "model": "ic2:block/generator/heat/electric_heat_generator",
+      "y": 90
+    },
+    "type\u003delectric_heat_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/heat/electric_heat_generator_active",
+      "x": 90
+    },
+    "type\u003delectric_heat_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/heat/electric_heat_generator_active",
+      "x": 270
+    },
+    "type\u003delectric_heat_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/heat/electric_heat_generator_active"
+    },
+    "type\u003delectric_heat_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/heat/electric_heat_generator_active",
+      "y": 180
+    },
+    "type\u003delectric_heat_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/heat/electric_heat_generator_active",
+      "y": 270
+    },
+    "type\u003delectric_heat_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/heat/electric_heat_generator_active",
+      "y": 90
+    },
+    "type\u003dfluid_heat_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/heat/fluid_heat_generator",
+      "x": 90
+    },
+    "type\u003dfluid_heat_generator,facing\u003dup": {
+      "model": "ic2:block/generator/heat/fluid_heat_generator",
+      "x": 270
+    },
+    "type\u003dfluid_heat_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/heat/fluid_heat_generator"
+    },
+    "type\u003dfluid_heat_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/heat/fluid_heat_generator",
+      "y": 180
+    },
+    "type\u003dfluid_heat_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/heat/fluid_heat_generator",
+      "y": 270
+    },
+    "type\u003dfluid_heat_generator,facing\u003deast": {
+      "model": "ic2:block/generator/heat/fluid_heat_generator",
+      "y": 90
+    },
+    "type\u003dfluid_heat_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/heat/fluid_heat_generator_active",
+      "x": 90
+    },
+    "type\u003dfluid_heat_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/heat/fluid_heat_generator_active",
+      "x": 270
+    },
+    "type\u003dfluid_heat_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/heat/fluid_heat_generator_active"
+    },
+    "type\u003dfluid_heat_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/heat/fluid_heat_generator_active",
+      "y": 180
+    },
+    "type\u003dfluid_heat_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/heat/fluid_heat_generator_active",
+      "y": 270
+    },
+    "type\u003dfluid_heat_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/heat/fluid_heat_generator_active",
+      "y": 90
+    },
+    "type\u003drt_heat_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/heat/rt_heat_generator",
+      "x": 90
+    },
+    "type\u003drt_heat_generator,facing\u003dup": {
+      "model": "ic2:block/generator/heat/rt_heat_generator",
+      "x": 270
+    },
+    "type\u003drt_heat_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/heat/rt_heat_generator"
+    },
+    "type\u003drt_heat_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/heat/rt_heat_generator",
+      "y": 180
+    },
+    "type\u003drt_heat_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/heat/rt_heat_generator",
+      "y": 270
+    },
+    "type\u003drt_heat_generator,facing\u003deast": {
+      "model": "ic2:block/generator/heat/rt_heat_generator",
+      "y": 90
+    },
+    "type\u003drt_heat_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/heat/rt_heat_generator_active",
+      "x": 90
+    },
+    "type\u003drt_heat_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/heat/rt_heat_generator_active",
+      "x": 270
+    },
+    "type\u003drt_heat_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/heat/rt_heat_generator_active"
+    },
+    "type\u003drt_heat_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/heat/rt_heat_generator_active",
+      "y": 180
+    },
+    "type\u003drt_heat_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/heat/rt_heat_generator_active",
+      "y": 270
+    },
+    "type\u003drt_heat_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/heat/rt_heat_generator_active",
+      "y": 90
+    },
+    "type\u003dsolid_heat_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/heat/solid_heat_generator",
+      "x": 90
+    },
+    "type\u003dsolid_heat_generator,facing\u003dup": {
+      "model": "ic2:block/generator/heat/solid_heat_generator",
+      "x": 270
+    },
+    "type\u003dsolid_heat_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/heat/solid_heat_generator"
+    },
+    "type\u003dsolid_heat_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/heat/solid_heat_generator",
+      "y": 180
+    },
+    "type\u003dsolid_heat_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/heat/solid_heat_generator",
+      "y": 270
+    },
+    "type\u003dsolid_heat_generator,facing\u003deast": {
+      "model": "ic2:block/generator/heat/solid_heat_generator",
+      "y": 90
+    },
+    "type\u003dsolid_heat_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/heat/solid_heat_generator_active",
+      "x": 90
+    },
+    "type\u003dsolid_heat_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/heat/solid_heat_generator_active",
+      "x": 270
+    },
+    "type\u003dsolid_heat_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/heat/solid_heat_generator_active"
+    },
+    "type\u003dsolid_heat_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/heat/solid_heat_generator_active",
+      "y": 180
+    },
+    "type\u003dsolid_heat_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/heat/solid_heat_generator_active",
+      "y": 270
+    },
+    "type\u003dsolid_heat_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/heat/solid_heat_generator_active",
+      "y": 90
+    },
+    "type\u003delectric_kinetic_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/kinetic/electric_kinetic_generator",
+      "x": 90
+    },
+    "type\u003delectric_kinetic_generator,facing\u003dup": {
+      "model": "ic2:block/generator/kinetic/electric_kinetic_generator",
+      "x": 270
+    },
+    "type\u003delectric_kinetic_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/kinetic/electric_kinetic_generator"
+    },
+    "type\u003delectric_kinetic_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/kinetic/electric_kinetic_generator",
+      "y": 180
+    },
+    "type\u003delectric_kinetic_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/kinetic/electric_kinetic_generator",
+      "y": 270
+    },
+    "type\u003delectric_kinetic_generator,facing\u003deast": {
+      "model": "ic2:block/generator/kinetic/electric_kinetic_generator",
+      "y": 90
+    },
+    "type\u003delectric_kinetic_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/kinetic/electric_kinetic_generator",
+      "x": 90
+    },
+    "type\u003delectric_kinetic_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/kinetic/electric_kinetic_generator",
+      "x": 270
+    },
+    "type\u003delectric_kinetic_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/kinetic/electric_kinetic_generator"
+    },
+    "type\u003delectric_kinetic_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/kinetic/electric_kinetic_generator",
+      "y": 180
+    },
+    "type\u003delectric_kinetic_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/kinetic/electric_kinetic_generator",
+      "y": 270
+    },
+    "type\u003delectric_kinetic_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/kinetic/electric_kinetic_generator",
+      "y": 90
+    },
+    "type\u003dmanual_kinetic_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/kinetic/manual_kinetic_generator",
+      "x": 90
+    },
+    "type\u003dmanual_kinetic_generator,facing\u003dup": {
+      "model": "ic2:block/generator/kinetic/manual_kinetic_generator",
+      "x": 270
+    },
+    "type\u003dmanual_kinetic_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/kinetic/manual_kinetic_generator"
+    },
+    "type\u003dmanual_kinetic_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/kinetic/manual_kinetic_generator",
+      "y": 180
+    },
+    "type\u003dmanual_kinetic_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/kinetic/manual_kinetic_generator",
+      "y": 270
+    },
+    "type\u003dmanual_kinetic_generator,facing\u003deast": {
+      "model": "ic2:block/generator/kinetic/manual_kinetic_generator",
+      "y": 90
+    },
+    "type\u003dsteam_kinetic_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/kinetic/steam_kinetic_generator",
+      "x": 90
+    },
+    "type\u003dsteam_kinetic_generator,facing\u003dup": {
+      "model": "ic2:block/generator/kinetic/steam_kinetic_generator",
+      "x": 270
+    },
+    "type\u003dsteam_kinetic_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/kinetic/steam_kinetic_generator"
+    },
+    "type\u003dsteam_kinetic_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/kinetic/steam_kinetic_generator",
+      "y": 180
+    },
+    "type\u003dsteam_kinetic_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/kinetic/steam_kinetic_generator",
+      "y": 270
+    },
+    "type\u003dsteam_kinetic_generator,facing\u003deast": {
+      "model": "ic2:block/generator/kinetic/steam_kinetic_generator",
+      "y": 90
+    },
+    "type\u003dsteam_kinetic_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/kinetic/steam_kinetic_generator_active",
+      "x": 90
+    },
+    "type\u003dsteam_kinetic_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/kinetic/steam_kinetic_generator_active",
+      "x": 270
+    },
+    "type\u003dsteam_kinetic_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/kinetic/steam_kinetic_generator_active"
+    },
+    "type\u003dsteam_kinetic_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/kinetic/steam_kinetic_generator_active",
+      "y": 180
+    },
+    "type\u003dsteam_kinetic_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/kinetic/steam_kinetic_generator_active",
+      "y": 270
+    },
+    "type\u003dsteam_kinetic_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/kinetic/steam_kinetic_generator_active",
+      "y": 90
+    },
+    "type\u003dstirling_kinetic_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/kinetic/stirling_kinetic_generator",
+      "x": 90
+    },
+    "type\u003dstirling_kinetic_generator,facing\u003dup": {
+      "model": "ic2:block/generator/kinetic/stirling_kinetic_generator",
+      "x": 270
+    },
+    "type\u003dstirling_kinetic_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/kinetic/stirling_kinetic_generator"
+    },
+    "type\u003dstirling_kinetic_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/kinetic/stirling_kinetic_generator",
+      "y": 180
+    },
+    "type\u003dstirling_kinetic_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/kinetic/stirling_kinetic_generator",
+      "y": 270
+    },
+    "type\u003dstirling_kinetic_generator,facing\u003deast": {
+      "model": "ic2:block/generator/kinetic/stirling_kinetic_generator",
+      "y": 90
+    },
+    "type\u003dstirling_kinetic_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/kinetic/stirling_kinetic_generator_active",
+      "x": 90
+    },
+    "type\u003dstirling_kinetic_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/kinetic/stirling_kinetic_generator_active",
+      "x": 270
+    },
+    "type\u003dstirling_kinetic_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/kinetic/stirling_kinetic_generator_active"
+    },
+    "type\u003dstirling_kinetic_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/kinetic/stirling_kinetic_generator_active",
+      "y": 180
+    },
+    "type\u003dstirling_kinetic_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/kinetic/stirling_kinetic_generator_active",
+      "y": 270
+    },
+    "type\u003dstirling_kinetic_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/kinetic/stirling_kinetic_generator_active",
+      "y": 90
+    },
+    "type\u003dwater_kinetic_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/kinetic/water_kinetic_generator",
+      "x": 90
+    },
+    "type\u003dwater_kinetic_generator,facing\u003dup": {
+      "model": "ic2:block/generator/kinetic/water_kinetic_generator",
+      "x": 270
+    },
+    "type\u003dwater_kinetic_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/kinetic/water_kinetic_generator"
+    },
+    "type\u003dwater_kinetic_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/kinetic/water_kinetic_generator",
+      "y": 180
+    },
+    "type\u003dwater_kinetic_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/kinetic/water_kinetic_generator",
+      "y": 270
+    },
+    "type\u003dwater_kinetic_generator,facing\u003deast": {
+      "model": "ic2:block/generator/kinetic/water_kinetic_generator",
+      "y": 90
+    },
+    "type\u003dwater_kinetic_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/kinetic/water_kinetic_generator",
+      "x": 90
+    },
+    "type\u003dwater_kinetic_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/kinetic/water_kinetic_generator",
+      "x": 270
+    },
+    "type\u003dwater_kinetic_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/kinetic/water_kinetic_generator"
+    },
+    "type\u003dwater_kinetic_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/kinetic/water_kinetic_generator",
+      "y": 180
+    },
+    "type\u003dwater_kinetic_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/kinetic/water_kinetic_generator",
+      "y": 270
+    },
+    "type\u003dwater_kinetic_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/kinetic/water_kinetic_generator",
+      "y": 90
+    },
+    "type\u003dwind_kinetic_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/kinetic/wind_kinetic_generator",
+      "x": 90
+    },
+    "type\u003dwind_kinetic_generator,facing\u003dup": {
+      "model": "ic2:block/generator/kinetic/wind_kinetic_generator",
+      "x": 270
+    },
+    "type\u003dwind_kinetic_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/kinetic/wind_kinetic_generator"
+    },
+    "type\u003dwind_kinetic_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/kinetic/wind_kinetic_generator",
+      "y": 180
+    },
+    "type\u003dwind_kinetic_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/kinetic/wind_kinetic_generator",
+      "y": 270
+    },
+    "type\u003dwind_kinetic_generator,facing\u003deast": {
+      "model": "ic2:block/generator/kinetic/wind_kinetic_generator",
+      "y": 90
+    },
+    "type\u003dwind_kinetic_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/kinetic/wind_kinetic_generator",
+      "x": 90
+    },
+    "type\u003dwind_kinetic_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/kinetic/wind_kinetic_generator",
+      "x": 270
+    },
+    "type\u003dwind_kinetic_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/kinetic/wind_kinetic_generator"
+    },
+    "type\u003dwind_kinetic_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/kinetic/wind_kinetic_generator",
+      "y": 180
+    },
+    "type\u003dwind_kinetic_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/kinetic/wind_kinetic_generator",
+      "y": 270
+    },
+    "type\u003dwind_kinetic_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/kinetic/wind_kinetic_generator",
+      "y": 90
+    },
+    "type\u003dnuclear_reactor,facing\u003ddown": {
+      "model": "ic2:block/generator/reactor/nuclear_reactor",
+      "x": 90
+    },
+    "type\u003dnuclear_reactor,facing\u003dup": {
+      "model": "ic2:block/generator/reactor/nuclear_reactor",
+      "x": 270
+    },
+    "type\u003dnuclear_reactor,facing\u003dnorth": {
+      "model": "ic2:block/generator/reactor/nuclear_reactor"
+    },
+    "type\u003dnuclear_reactor,facing\u003dsouth": {
+      "model": "ic2:block/generator/reactor/nuclear_reactor",
+      "y": 180
+    },
+    "type\u003dnuclear_reactor,facing\u003dwest": {
+      "model": "ic2:block/generator/reactor/nuclear_reactor",
+      "y": 270
+    },
+    "type\u003dnuclear_reactor,facing\u003deast": {
+      "model": "ic2:block/generator/reactor/nuclear_reactor",
+      "y": 90
+    },
+    "type\u003dnuclear_reactor_active,facing\u003ddown": {
+      "model": "ic2:block/generator/reactor/nuclear_reactor_active",
+      "x": 90
+    },
+    "type\u003dnuclear_reactor_active,facing\u003dup": {
+      "model": "ic2:block/generator/reactor/nuclear_reactor_active",
+      "x": 270
+    },
+    "type\u003dnuclear_reactor_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/reactor/nuclear_reactor_active"
+    },
+    "type\u003dnuclear_reactor_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/reactor/nuclear_reactor_active",
+      "y": 180
+    },
+    "type\u003dnuclear_reactor_active,facing\u003dwest": {
+      "model": "ic2:block/generator/reactor/nuclear_reactor_active",
+      "y": 270
+    },
+    "type\u003dnuclear_reactor_active,facing\u003deast": {
+      "model": "ic2:block/generator/reactor/nuclear_reactor_active",
+      "y": 90
+    },
+    "type\u003dreactor_access_hatch,facing\u003ddown": {
+      "model": "ic2:block/generator/reactor/reactor_access_hatch",
+      "x": 90
+    },
+    "type\u003dreactor_access_hatch,facing\u003dup": {
+      "model": "ic2:block/generator/reactor/reactor_access_hatch",
+      "x": 270
+    },
+    "type\u003dreactor_access_hatch,facing\u003dnorth": {
+      "model": "ic2:block/generator/reactor/reactor_access_hatch"
+    },
+    "type\u003dreactor_access_hatch,facing\u003dsouth": {
+      "model": "ic2:block/generator/reactor/reactor_access_hatch",
+      "y": 180
+    },
+    "type\u003dreactor_access_hatch,facing\u003dwest": {
+      "model": "ic2:block/generator/reactor/reactor_access_hatch",
+      "y": 270
+    },
+    "type\u003dreactor_access_hatch,facing\u003deast": {
+      "model": "ic2:block/generator/reactor/reactor_access_hatch",
+      "y": 90
+    },
+    "type\u003dreactor_chamber,facing\u003ddown": {
+      "model": "ic2:block/generator/reactor/reactor_chamber",
+      "x": 90
+    },
+    "type\u003dreactor_chamber,facing\u003dup": {
+      "model": "ic2:block/generator/reactor/reactor_chamber",
+      "x": 270
+    },
+    "type\u003dreactor_chamber,facing\u003dnorth": {
+      "model": "ic2:block/generator/reactor/reactor_chamber"
+    },
+    "type\u003dreactor_chamber,facing\u003dsouth": {
+      "model": "ic2:block/generator/reactor/reactor_chamber",
+      "y": 180
+    },
+    "type\u003dreactor_chamber,facing\u003dwest": {
+      "model": "ic2:block/generator/reactor/reactor_chamber",
+      "y": 270
+    },
+    "type\u003dreactor_chamber,facing\u003deast": {
+      "model": "ic2:block/generator/reactor/reactor_chamber",
+      "y": 90
+    },
+    "type\u003dreactor_fluid_port,facing\u003ddown": {
+      "model": "ic2:block/generator/reactor/reactor_fluid_port",
+      "x": 90
+    },
+    "type\u003dreactor_fluid_port,facing\u003dup": {
+      "model": "ic2:block/generator/reactor/reactor_fluid_port",
+      "x": 270
+    },
+    "type\u003dreactor_fluid_port,facing\u003dnorth": {
+      "model": "ic2:block/generator/reactor/reactor_fluid_port"
+    },
+    "type\u003dreactor_fluid_port,facing\u003dsouth": {
+      "model": "ic2:block/generator/reactor/reactor_fluid_port",
+      "y": 180
+    },
+    "type\u003dreactor_fluid_port,facing\u003dwest": {
+      "model": "ic2:block/generator/reactor/reactor_fluid_port",
+      "y": 270
+    },
+    "type\u003dreactor_fluid_port,facing\u003deast": {
+      "model": "ic2:block/generator/reactor/reactor_fluid_port",
+      "y": 90
+    },
+    "type\u003dreactor_redstone_port,facing\u003ddown": {
+      "model": "ic2:block/generator/reactor/reactor_redstone_port",
+      "x": 90
+    },
+    "type\u003dreactor_redstone_port,facing\u003dup": {
+      "model": "ic2:block/generator/reactor/reactor_redstone_port",
+      "x": 270
+    },
+    "type\u003dreactor_redstone_port,facing\u003dnorth": {
+      "model": "ic2:block/generator/reactor/reactor_redstone_port"
+    },
+    "type\u003dreactor_redstone_port,facing\u003dsouth": {
+      "model": "ic2:block/generator/reactor/reactor_redstone_port",
+      "y": 180
+    },
+    "type\u003dreactor_redstone_port,facing\u003dwest": {
+      "model": "ic2:block/generator/reactor/reactor_redstone_port",
+      "y": 270
+    },
+    "type\u003dreactor_redstone_port,facing\u003deast": {
+      "model": "ic2:block/generator/reactor/reactor_redstone_port",
+      "y": 90
+    },
+    "type\u003dcondenser,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/condenser",
+      "x": 90
+    },
+    "type\u003dcondenser,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/condenser",
+      "x": 270
+    },
+    "type\u003dcondenser,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/condenser"
+    },
+    "type\u003dcondenser,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/condenser",
+      "y": 180
+    },
+    "type\u003dcondenser,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/condenser",
+      "y": 270
+    },
+    "type\u003dcondenser,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/condenser",
+      "y": 90
+    },
+    "type\u003dcondenser_active,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/condenser_active",
+      "x": 90
+    },
+    "type\u003dcondenser_active,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/condenser_active",
+      "x": 270
+    },
+    "type\u003dcondenser_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/condenser_active"
+    },
+    "type\u003dcondenser_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/condenser_active",
+      "y": 180
+    },
+    "type\u003dcondenser_active,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/condenser_active",
+      "y": 270
+    },
+    "type\u003dcondenser_active,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/condenser_active",
+      "y": 90
+    },
+    "type\u003dfluid_bottler,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/fluid_bottler",
+      "x": 90
+    },
+    "type\u003dfluid_bottler,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/fluid_bottler",
+      "x": 270
+    },
+    "type\u003dfluid_bottler,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/fluid_bottler"
+    },
+    "type\u003dfluid_bottler,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/fluid_bottler",
+      "y": 180
+    },
+    "type\u003dfluid_bottler,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/fluid_bottler",
+      "y": 270
+    },
+    "type\u003dfluid_bottler,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/fluid_bottler",
+      "y": 90
+    },
+    "type\u003dfluid_bottler_active,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/fluid_bottler_active",
+      "x": 90
+    },
+    "type\u003dfluid_bottler_active,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/fluid_bottler_active",
+      "x": 270
+    },
+    "type\u003dfluid_bottler_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/fluid_bottler_active"
+    },
+    "type\u003dfluid_bottler_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/fluid_bottler_active",
+      "y": 180
+    },
+    "type\u003dfluid_bottler_active,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/fluid_bottler_active",
+      "y": 270
+    },
+    "type\u003dfluid_bottler_active,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/fluid_bottler_active",
+      "y": 90
+    },
+    "type\u003dfluid_distributor,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/fluid_distributor",
+      "x": 90
+    },
+    "type\u003dfluid_distributor,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/fluid_distributor",
+      "x": 270
+    },
+    "type\u003dfluid_distributor,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/fluid_distributor"
+    },
+    "type\u003dfluid_distributor,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/fluid_distributor",
+      "y": 180
+    },
+    "type\u003dfluid_distributor,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/fluid_distributor",
+      "y": 270
+    },
+    "type\u003dfluid_distributor,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/fluid_distributor",
+      "y": 90
+    },
+    "type\u003dfluid_distributor_active,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/fluid_distributor_active",
+      "x": 90
+    },
+    "type\u003dfluid_distributor_active,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/fluid_distributor_active",
+      "x": 270
+    },
+    "type\u003dfluid_distributor_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/fluid_distributor_active"
+    },
+    "type\u003dfluid_distributor_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/fluid_distributor_active",
+      "y": 180
+    },
+    "type\u003dfluid_distributor_active,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/fluid_distributor_active",
+      "y": 270
+    },
+    "type\u003dfluid_distributor_active,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/fluid_distributor_active",
+      "y": 90
+    },
+    "type\u003dfluid_regulator,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/fluid_regulator",
+      "x": 90
+    },
+    "type\u003dfluid_regulator,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/fluid_regulator",
+      "x": 270
+    },
+    "type\u003dfluid_regulator,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/fluid_regulator"
+    },
+    "type\u003dfluid_regulator,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/fluid_regulator",
+      "y": 180
+    },
+    "type\u003dfluid_regulator,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/fluid_regulator",
+      "y": 270
+    },
+    "type\u003dfluid_regulator,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/fluid_regulator",
+      "y": 90
+    },
+    "type\u003dfluid_regulator_active,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/fluid_regulator_active",
+      "x": 90
+    },
+    "type\u003dfluid_regulator_active,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/fluid_regulator_active",
+      "x": 270
+    },
+    "type\u003dfluid_regulator_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/fluid_regulator_active"
+    },
+    "type\u003dfluid_regulator_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/fluid_regulator_active",
+      "y": 180
+    },
+    "type\u003dfluid_regulator_active,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/fluid_regulator_active",
+      "y": 270
+    },
+    "type\u003dfluid_regulator_active,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/fluid_regulator_active",
+      "y": 90
+    },
+    "type\u003dliquid_heat_exchanger,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/liquid_heat_exchanger",
+      "x": 90
+    },
+    "type\u003dliquid_heat_exchanger,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/liquid_heat_exchanger",
+      "x": 270
+    },
+    "type\u003dliquid_heat_exchanger,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/liquid_heat_exchanger"
+    },
+    "type\u003dliquid_heat_exchanger,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/liquid_heat_exchanger",
+      "y": 180
+    },
+    "type\u003dliquid_heat_exchanger,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/liquid_heat_exchanger",
+      "y": 270
+    },
+    "type\u003dliquid_heat_exchanger,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/liquid_heat_exchanger",
+      "y": 90
+    },
+    "type\u003dliquid_heat_exchanger_active,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/liquid_heat_exchanger_active",
+      "x": 90
+    },
+    "type\u003dliquid_heat_exchanger_active,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/liquid_heat_exchanger_active",
+      "x": 270
+    },
+    "type\u003dliquid_heat_exchanger_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/liquid_heat_exchanger_active"
+    },
+    "type\u003dliquid_heat_exchanger_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/liquid_heat_exchanger_active",
+      "y": 180
+    },
+    "type\u003dliquid_heat_exchanger_active,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/liquid_heat_exchanger_active",
+      "y": 270
+    },
+    "type\u003dliquid_heat_exchanger_active,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/liquid_heat_exchanger_active",
+      "y": 90
+    },
+    "type\u003dpump,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/pump",
+      "x": 90
+    },
+    "type\u003dpump,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/pump",
+      "x": 270
+    },
+    "type\u003dpump,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/pump"
+    },
+    "type\u003dpump,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/pump",
+      "y": 180
+    },
+    "type\u003dpump,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/pump",
+      "y": 270
+    },
+    "type\u003dpump,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/pump",
+      "y": 90
+    },
+    "type\u003dpump_active,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/pump_active",
+      "x": 90
+    },
+    "type\u003dpump_active,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/pump_active",
+      "x": 270
+    },
+    "type\u003dpump_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/pump_active"
+    },
+    "type\u003dpump_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/pump_active",
+      "y": 180
+    },
+    "type\u003dpump_active,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/pump_active",
+      "y": 270
+    },
+    "type\u003dpump_active,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/pump_active",
+      "y": 90
+    },
+    "type\u003dsolar_distiller,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/solar_distiller",
+      "x": 90
+    },
+    "type\u003dsolar_distiller,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/solar_distiller",
+      "x": 270
+    },
+    "type\u003dsolar_distiller,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/solar_distiller"
+    },
+    "type\u003dsolar_distiller,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/solar_distiller",
+      "y": 180
+    },
+    "type\u003dsolar_distiller,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/solar_distiller",
+      "y": 270
+    },
+    "type\u003dsolar_distiller,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/solar_distiller",
+      "y": 90
+    },
+    "type\u003dsteam_generator,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/steam_generator",
+      "x": 90
+    },
+    "type\u003dsteam_generator,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/steam_generator",
+      "x": 270
+    },
+    "type\u003dsteam_generator,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/steam_generator"
+    },
+    "type\u003dsteam_generator,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/steam_generator",
+      "y": 180
+    },
+    "type\u003dsteam_generator,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/steam_generator",
+      "y": 270
+    },
+    "type\u003dsteam_generator,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/steam_generator",
+      "y": 90
+    },
+    "type\u003dsteam_generator_active,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/steam_generator_active",
+      "x": 90
+    },
+    "type\u003dsteam_generator_active,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/steam_generator_active",
+      "x": 270
+    },
+    "type\u003dsteam_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/steam_generator_active"
+    },
+    "type\u003dsteam_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/steam_generator_active",
+      "y": 180
+    },
+    "type\u003dsteam_generator_active,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/steam_generator_active",
+      "y": 270
+    },
+    "type\u003dsteam_generator_active,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/steam_generator_active",
+      "y": 90
+    },
+    "type\u003ditem_buffer,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/item_buffer",
+      "x": 90
+    },
+    "type\u003ditem_buffer,facing\u003dup": {
+      "model": "ic2:block/machine/misc/item_buffer",
+      "x": 270
+    },
+    "type\u003ditem_buffer,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/item_buffer"
+    },
+    "type\u003ditem_buffer,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/item_buffer",
+      "y": 180
+    },
+    "type\u003ditem_buffer,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/item_buffer",
+      "y": 270
+    },
+    "type\u003ditem_buffer,facing\u003deast": {
+      "model": "ic2:block/machine/misc/item_buffer",
+      "y": 90
+    },
+    "type\u003dluminator_flat,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/luminator_flat",
+      "x": 90
+    },
+    "type\u003dluminator_flat,facing\u003dup": {
+      "model": "ic2:block/machine/misc/luminator_flat",
+      "x": 270
+    },
+    "type\u003dluminator_flat,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/luminator_flat"
+    },
+    "type\u003dluminator_flat,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/luminator_flat",
+      "y": 180
+    },
+    "type\u003dluminator_flat,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/luminator_flat",
+      "y": 270
+    },
+    "type\u003dluminator_flat,facing\u003deast": {
+      "model": "ic2:block/machine/misc/luminator_flat",
+      "y": 90
+    },
+    "type\u003dluminator_flat_active,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/luminator_flat_active",
+      "x": 90
+    },
+    "type\u003dluminator_flat_active,facing\u003dup": {
+      "model": "ic2:block/machine/misc/luminator_flat_active",
+      "x": 270
+    },
+    "type\u003dluminator_flat_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/luminator_flat_active"
+    },
+    "type\u003dluminator_flat_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/luminator_flat_active",
+      "y": 180
+    },
+    "type\u003dluminator_flat_active,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/luminator_flat_active",
+      "y": 270
+    },
+    "type\u003dluminator_flat_active,facing\u003deast": {
+      "model": "ic2:block/machine/misc/luminator_flat_active",
+      "y": 90
+    },
+    "type\u003dmagnetizer,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/magnetizer",
+      "x": 90
+    },
+    "type\u003dmagnetizer,facing\u003dup": {
+      "model": "ic2:block/machine/misc/magnetizer",
+      "x": 270
+    },
+    "type\u003dmagnetizer,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/magnetizer"
+    },
+    "type\u003dmagnetizer,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/magnetizer",
+      "y": 180
+    },
+    "type\u003dmagnetizer,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/magnetizer",
+      "y": 270
+    },
+    "type\u003dmagnetizer,facing\u003deast": {
+      "model": "ic2:block/machine/misc/magnetizer",
+      "y": 90
+    },
+    "type\u003dsorting_machine,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/sorting_machine",
+      "x": 90
+    },
+    "type\u003dsorting_machine,facing\u003dup": {
+      "model": "ic2:block/machine/misc/sorting_machine",
+      "x": 270
+    },
+    "type\u003dsorting_machine,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/sorting_machine"
+    },
+    "type\u003dsorting_machine,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/sorting_machine",
+      "y": 180
+    },
+    "type\u003dsorting_machine,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/sorting_machine",
+      "y": 270
+    },
+    "type\u003dsorting_machine,facing\u003deast": {
+      "model": "ic2:block/machine/misc/sorting_machine",
+      "y": 90
+    },
+    "type\u003dteleporter,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/teleporter",
+      "x": 90
+    },
+    "type\u003dteleporter,facing\u003dup": {
+      "model": "ic2:block/machine/misc/teleporter",
+      "x": 270
+    },
+    "type\u003dteleporter,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/teleporter"
+    },
+    "type\u003dteleporter,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/teleporter",
+      "y": 180
+    },
+    "type\u003dteleporter,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/teleporter",
+      "y": 270
+    },
+    "type\u003dteleporter,facing\u003deast": {
+      "model": "ic2:block/machine/misc/teleporter",
+      "y": 90
+    },
+    "type\u003dteleporter_active,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/teleporter_active",
+      "x": 90
+    },
+    "type\u003dteleporter_active,facing\u003dup": {
+      "model": "ic2:block/machine/misc/teleporter_active",
+      "x": 270
+    },
+    "type\u003dteleporter_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/teleporter_active"
+    },
+    "type\u003dteleporter_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/teleporter_active",
+      "y": 180
+    },
+    "type\u003dteleporter_active,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/teleporter_active",
+      "y": 270
+    },
+    "type\u003dteleporter_active,facing\u003deast": {
+      "model": "ic2:block/machine/misc/teleporter_active",
+      "y": 90
+    },
+    "type\u003dterraformer,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/terraformer",
+      "x": 90
+    },
+    "type\u003dterraformer,facing\u003dup": {
+      "model": "ic2:block/machine/misc/terraformer",
+      "x": 270
+    },
+    "type\u003dterraformer,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/terraformer"
+    },
+    "type\u003dterraformer,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/terraformer",
+      "y": 180
+    },
+    "type\u003dterraformer,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/terraformer",
+      "y": 270
+    },
+    "type\u003dterraformer,facing\u003deast": {
+      "model": "ic2:block/machine/misc/terraformer",
+      "y": 90
+    },
+    "type\u003dterraformer_active,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/terraformer_active",
+      "x": 90
+    },
+    "type\u003dterraformer_active,facing\u003dup": {
+      "model": "ic2:block/machine/misc/terraformer_active",
+      "x": 270
+    },
+    "type\u003dterraformer_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/terraformer_active"
+    },
+    "type\u003dterraformer_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/terraformer_active",
+      "y": 180
+    },
+    "type\u003dterraformer_active,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/terraformer_active",
+      "y": 270
+    },
+    "type\u003dterraformer_active,facing\u003deast": {
+      "model": "ic2:block/machine/misc/terraformer_active",
+      "y": 90
+    },
+    "type\u003dtesla_coil,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/tesla_coil",
+      "x": 90
+    },
+    "type\u003dtesla_coil,facing\u003dup": {
+      "model": "ic2:block/machine/misc/tesla_coil",
+      "x": 270
+    },
+    "type\u003dtesla_coil,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/tesla_coil"
+    },
+    "type\u003dtesla_coil,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/tesla_coil",
+      "y": 180
+    },
+    "type\u003dtesla_coil,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/tesla_coil",
+      "y": 270
+    },
+    "type\u003dtesla_coil,facing\u003deast": {
+      "model": "ic2:block/machine/misc/tesla_coil",
+      "y": 90
+    },
+    "type\u003dcanner,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/canner",
+      "x": 90
+    },
+    "type\u003dcanner,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/canner",
+      "x": 270
+    },
+    "type\u003dcanner,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/canner"
+    },
+    "type\u003dcanner,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/canner",
+      "y": 180
+    },
+    "type\u003dcanner,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/canner",
+      "y": 270
+    },
+    "type\u003dcanner,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/canner",
+      "y": 90
+    },
+    "type\u003dcanner_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/canner_active",
+      "x": 90
+    },
+    "type\u003dcanner_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/canner_active",
+      "x": 270
+    },
+    "type\u003dcanner_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/canner_active"
+    },
+    "type\u003dcanner_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/canner_active",
+      "y": 180
+    },
+    "type\u003dcanner_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/canner_active",
+      "y": 270
+    },
+    "type\u003dcanner_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/canner_active",
+      "y": 90
+    },
+    "type\u003dcompressor,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/compressor",
+      "x": 90
+    },
+    "type\u003dcompressor,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/compressor",
+      "x": 270
+    },
+    "type\u003dcompressor,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/compressor"
+    },
+    "type\u003dcompressor,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/compressor",
+      "y": 180
+    },
+    "type\u003dcompressor,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/compressor",
+      "y": 270
+    },
+    "type\u003dcompressor,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/compressor",
+      "y": 90
+    },
+    "type\u003dcompressor_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/compressor_active",
+      "x": 90
+    },
+    "type\u003dcompressor_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/compressor_active",
+      "x": 270
+    },
+    "type\u003dcompressor_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/compressor_active"
+    },
+    "type\u003dcompressor_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/compressor_active",
+      "y": 180
+    },
+    "type\u003dcompressor_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/compressor_active",
+      "y": 270
+    },
+    "type\u003dcompressor_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/compressor_active",
+      "y": 90
+    },
+    "type\u003delectric_furnace,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/electric_furnace",
+      "x": 90
+    },
+    "type\u003delectric_furnace,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/electric_furnace",
+      "x": 270
+    },
+    "type\u003delectric_furnace,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/electric_furnace"
+    },
+    "type\u003delectric_furnace,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/electric_furnace",
+      "y": 180
+    },
+    "type\u003delectric_furnace,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/electric_furnace",
+      "y": 270
+    },
+    "type\u003delectric_furnace,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/electric_furnace",
+      "y": 90
+    },
+    "type\u003delectric_furnace_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/electric_furnace_active",
+      "x": 90
+    },
+    "type\u003delectric_furnace_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/electric_furnace_active",
+      "x": 270
+    },
+    "type\u003delectric_furnace_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/electric_furnace_active"
+    },
+    "type\u003delectric_furnace_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/electric_furnace_active",
+      "y": 180
+    },
+    "type\u003delectric_furnace_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/electric_furnace_active",
+      "y": 270
+    },
+    "type\u003delectric_furnace_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/electric_furnace_active",
+      "y": 90
+    },
+    "type\u003dextractor,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/extractor",
+      "x": 90
+    },
+    "type\u003dextractor,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/extractor",
+      "x": 270
+    },
+    "type\u003dextractor,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/extractor"
+    },
+    "type\u003dextractor,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/extractor",
+      "y": 180
+    },
+    "type\u003dextractor,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/extractor",
+      "y": 270
+    },
+    "type\u003dextractor,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/extractor",
+      "y": 90
+    },
+    "type\u003dextractor_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/extractor_active",
+      "x": 90
+    },
+    "type\u003dextractor_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/extractor_active",
+      "x": 270
+    },
+    "type\u003dextractor_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/extractor_active"
+    },
+    "type\u003dextractor_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/extractor_active",
+      "y": 180
+    },
+    "type\u003dextractor_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/extractor_active",
+      "y": 270
+    },
+    "type\u003dextractor_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/extractor_active",
+      "y": 90
+    },
+    "type\u003diron_furnace,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/iron_furnace",
+      "x": 90
+    },
+    "type\u003diron_furnace,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/iron_furnace",
+      "x": 270
+    },
+    "type\u003diron_furnace,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/iron_furnace"
+    },
+    "type\u003diron_furnace,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/iron_furnace",
+      "y": 180
+    },
+    "type\u003diron_furnace,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/iron_furnace",
+      "y": 270
+    },
+    "type\u003diron_furnace,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/iron_furnace",
+      "y": 90
+    },
+    "type\u003diron_furnace_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/iron_furnace_active",
+      "x": 90
+    },
+    "type\u003diron_furnace_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/iron_furnace_active",
+      "x": 270
+    },
+    "type\u003diron_furnace_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/iron_furnace_active"
+    },
+    "type\u003diron_furnace_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/iron_furnace_active",
+      "y": 180
+    },
+    "type\u003diron_furnace_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/iron_furnace_active",
+      "y": 270
+    },
+    "type\u003diron_furnace_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/iron_furnace_active",
+      "y": 90
+    },
+    "type\u003dmacerator,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/macerator",
+      "x": 90
+    },
+    "type\u003dmacerator,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/macerator",
+      "x": 270
+    },
+    "type\u003dmacerator,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/macerator"
+    },
+    "type\u003dmacerator,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/macerator",
+      "y": 180
+    },
+    "type\u003dmacerator,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/macerator",
+      "y": 270
+    },
+    "type\u003dmacerator,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/macerator",
+      "y": 90
+    },
+    "type\u003dmacerator_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/macerator_active",
+      "x": 90
+    },
+    "type\u003dmacerator_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/macerator_active",
+      "x": 270
+    },
+    "type\u003dmacerator_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/macerator_active"
+    },
+    "type\u003dmacerator_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/macerator_active",
+      "y": 180
+    },
+    "type\u003dmacerator_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/macerator_active",
+      "y": 270
+    },
+    "type\u003dmacerator_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/macerator_active",
+      "y": 90
+    },
+    "type\u003drecycler,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/recycler",
+      "x": 90
+    },
+    "type\u003drecycler,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/recycler",
+      "x": 270
+    },
+    "type\u003drecycler,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/recycler"
+    },
+    "type\u003drecycler,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/recycler",
+      "y": 180
+    },
+    "type\u003drecycler,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/recycler",
+      "y": 270
+    },
+    "type\u003drecycler,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/recycler",
+      "y": 90
+    },
+    "type\u003drecycler_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/recycler_active",
+      "x": 90
+    },
+    "type\u003drecycler_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/recycler_active",
+      "x": 270
+    },
+    "type\u003drecycler_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/recycler_active"
+    },
+    "type\u003drecycler_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/recycler_active",
+      "y": 180
+    },
+    "type\u003drecycler_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/recycler_active",
+      "y": 270
+    },
+    "type\u003drecycler_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/recycler_active",
+      "y": 90
+    },
+    "type\u003dsolid_canner,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/solid_canner",
+      "x": 90
+    },
+    "type\u003dsolid_canner,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/solid_canner",
+      "x": 270
+    },
+    "type\u003dsolid_canner,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/solid_canner"
+    },
+    "type\u003dsolid_canner,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/solid_canner",
+      "y": 180
+    },
+    "type\u003dsolid_canner,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/solid_canner",
+      "y": 270
+    },
+    "type\u003dsolid_canner,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/solid_canner",
+      "y": 90
+    },
+    "type\u003dsolid_canner_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/basic/solid_canner_active",
+      "x": 90
+    },
+    "type\u003dsolid_canner_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/basic/solid_canner_active",
+      "x": 270
+    },
+    "type\u003dsolid_canner_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/basic/solid_canner_active"
+    },
+    "type\u003dsolid_canner_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/basic/solid_canner_active",
+      "y": 180
+    },
+    "type\u003dsolid_canner_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/basic/solid_canner_active",
+      "y": 270
+    },
+    "type\u003dsolid_canner_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/basic/solid_canner_active",
+      "y": 90
+    },
+    "type\u003dblast_furnace,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/advanced/blast_furnace",
+      "x": 90
+    },
+    "type\u003dblast_furnace,facing\u003dup": {
+      "model": "ic2:block/machine/processing/advanced/blast_furnace",
+      "x": 270
+    },
+    "type\u003dblast_furnace,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/advanced/blast_furnace"
+    },
+    "type\u003dblast_furnace,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/advanced/blast_furnace",
+      "y": 180
+    },
+    "type\u003dblast_furnace,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/advanced/blast_furnace",
+      "y": 270
+    },
+    "type\u003dblast_furnace,facing\u003deast": {
+      "model": "ic2:block/machine/processing/advanced/blast_furnace",
+      "y": 90
+    },
+    "type\u003dblast_furnace_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/advanced/blast_furnace_active",
+      "x": 90
+    },
+    "type\u003dblast_furnace_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/advanced/blast_furnace_active",
+      "x": 270
+    },
+    "type\u003dblast_furnace_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/advanced/blast_furnace_active"
+    },
+    "type\u003dblast_furnace_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/advanced/blast_furnace_active",
+      "y": 180
+    },
+    "type\u003dblast_furnace_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/advanced/blast_furnace_active",
+      "y": 270
+    },
+    "type\u003dblast_furnace_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/advanced/blast_furnace_active",
+      "y": 90
+    },
+    "type\u003dblock_cutter,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/advanced/block_cutter",
+      "x": 90
+    },
+    "type\u003dblock_cutter,facing\u003dup": {
+      "model": "ic2:block/machine/processing/advanced/block_cutter",
+      "x": 270
+    },
+    "type\u003dblock_cutter,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/advanced/block_cutter"
+    },
+    "type\u003dblock_cutter,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/advanced/block_cutter",
+      "y": 180
+    },
+    "type\u003dblock_cutter,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/advanced/block_cutter",
+      "y": 270
+    },
+    "type\u003dblock_cutter,facing\u003deast": {
+      "model": "ic2:block/machine/processing/advanced/block_cutter",
+      "y": 90
+    },
+    "type\u003dblock_cutter_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/advanced/block_cutter_active",
+      "x": 90
+    },
+    "type\u003dblock_cutter_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/advanced/block_cutter_active",
+      "x": 270
+    },
+    "type\u003dblock_cutter_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/advanced/block_cutter_active"
+    },
+    "type\u003dblock_cutter_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/advanced/block_cutter_active",
+      "y": 180
+    },
+    "type\u003dblock_cutter_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/advanced/block_cutter_active",
+      "y": 270
+    },
+    "type\u003dblock_cutter_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/advanced/block_cutter_active",
+      "y": 90
+    },
+    "type\u003dcentrifuge,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/advanced/centrifuge",
+      "x": 90
+    },
+    "type\u003dcentrifuge,facing\u003dup": {
+      "model": "ic2:block/machine/processing/advanced/centrifuge",
+      "x": 270
+    },
+    "type\u003dcentrifuge,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/advanced/centrifuge"
+    },
+    "type\u003dcentrifuge,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/advanced/centrifuge",
+      "y": 180
+    },
+    "type\u003dcentrifuge,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/advanced/centrifuge",
+      "y": 270
+    },
+    "type\u003dcentrifuge,facing\u003deast": {
+      "model": "ic2:block/machine/processing/advanced/centrifuge",
+      "y": 90
+    },
+    "type\u003dcentrifuge_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/advanced/centrifuge_active",
+      "x": 90
+    },
+    "type\u003dcentrifuge_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/advanced/centrifuge_active",
+      "x": 270
+    },
+    "type\u003dcentrifuge_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/advanced/centrifuge_active"
+    },
+    "type\u003dcentrifuge_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/advanced/centrifuge_active",
+      "y": 180
+    },
+    "type\u003dcentrifuge_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/advanced/centrifuge_active",
+      "y": 270
+    },
+    "type\u003dcentrifuge_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/advanced/centrifuge_active",
+      "y": 90
+    },
+    "type\u003dfermenter,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/advanced/fermenter",
+      "x": 90
+    },
+    "type\u003dfermenter,facing\u003dup": {
+      "model": "ic2:block/machine/processing/advanced/fermenter",
+      "x": 270
+    },
+    "type\u003dfermenter,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/advanced/fermenter"
+    },
+    "type\u003dfermenter,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/advanced/fermenter",
+      "y": 180
+    },
+    "type\u003dfermenter,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/advanced/fermenter",
+      "y": 270
+    },
+    "type\u003dfermenter,facing\u003deast": {
+      "model": "ic2:block/machine/processing/advanced/fermenter",
+      "y": 90
+    },
+    "type\u003dfermenter_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/advanced/fermenter_active",
+      "x": 90
+    },
+    "type\u003dfermenter_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/advanced/fermenter_active",
+      "x": 270
+    },
+    "type\u003dfermenter_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/advanced/fermenter_active"
+    },
+    "type\u003dfermenter_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/advanced/fermenter_active",
+      "y": 180
+    },
+    "type\u003dfermenter_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/advanced/fermenter_active",
+      "y": 270
+    },
+    "type\u003dfermenter_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/advanced/fermenter_active",
+      "y": 90
+    },
+    "type\u003dinduction_furnace,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/advanced/induction_furnace",
+      "x": 90
+    },
+    "type\u003dinduction_furnace,facing\u003dup": {
+      "model": "ic2:block/machine/processing/advanced/induction_furnace",
+      "x": 270
+    },
+    "type\u003dinduction_furnace,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/advanced/induction_furnace"
+    },
+    "type\u003dinduction_furnace,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/advanced/induction_furnace",
+      "y": 180
+    },
+    "type\u003dinduction_furnace,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/advanced/induction_furnace",
+      "y": 270
+    },
+    "type\u003dinduction_furnace,facing\u003deast": {
+      "model": "ic2:block/machine/processing/advanced/induction_furnace",
+      "y": 90
+    },
+    "type\u003dinduction_furnace_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/advanced/induction_furnace_active",
+      "x": 90
+    },
+    "type\u003dinduction_furnace_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/advanced/induction_furnace_active",
+      "x": 270
+    },
+    "type\u003dinduction_furnace_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/advanced/induction_furnace_active"
+    },
+    "type\u003dinduction_furnace_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/advanced/induction_furnace_active",
+      "y": 180
+    },
+    "type\u003dinduction_furnace_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/advanced/induction_furnace_active",
+      "y": 270
+    },
+    "type\u003dinduction_furnace_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/advanced/induction_furnace_active",
+      "y": 90
+    },
+    "type\u003dmetal_former,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/advanced/metal_former",
+      "x": 90
+    },
+    "type\u003dmetal_former,facing\u003dup": {
+      "model": "ic2:block/machine/processing/advanced/metal_former",
+      "x": 270
+    },
+    "type\u003dmetal_former,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/advanced/metal_former"
+    },
+    "type\u003dmetal_former,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/advanced/metal_former",
+      "y": 180
+    },
+    "type\u003dmetal_former,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/advanced/metal_former",
+      "y": 270
+    },
+    "type\u003dmetal_former,facing\u003deast": {
+      "model": "ic2:block/machine/processing/advanced/metal_former",
+      "y": 90
+    },
+    "type\u003dmetal_former_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/advanced/metal_former_active",
+      "x": 90
+    },
+    "type\u003dmetal_former_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/advanced/metal_former_active",
+      "x": 270
+    },
+    "type\u003dmetal_former_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/advanced/metal_former_active"
+    },
+    "type\u003dmetal_former_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/advanced/metal_former_active",
+      "y": 180
+    },
+    "type\u003dmetal_former_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/advanced/metal_former_active",
+      "y": 270
+    },
+    "type\u003dmetal_former_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/advanced/metal_former_active",
+      "y": 90
+    },
+    "type\u003dore_washing_plant,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/advanced/ore_washing_plant",
+      "x": 90
+    },
+    "type\u003dore_washing_plant,facing\u003dup": {
+      "model": "ic2:block/machine/processing/advanced/ore_washing_plant",
+      "x": 270
+    },
+    "type\u003dore_washing_plant,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/advanced/ore_washing_plant"
+    },
+    "type\u003dore_washing_plant,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/advanced/ore_washing_plant",
+      "y": 180
+    },
+    "type\u003dore_washing_plant,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/advanced/ore_washing_plant",
+      "y": 270
+    },
+    "type\u003dore_washing_plant,facing\u003deast": {
+      "model": "ic2:block/machine/processing/advanced/ore_washing_plant",
+      "y": 90
+    },
+    "type\u003dore_washing_plant_active,facing\u003ddown": {
+      "model": "ic2:block/machine/processing/advanced/ore_washing_plant_active",
+      "x": 90
+    },
+    "type\u003dore_washing_plant_active,facing\u003dup": {
+      "model": "ic2:block/machine/processing/advanced/ore_washing_plant_active",
+      "x": 270
+    },
+    "type\u003dore_washing_plant_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/processing/advanced/ore_washing_plant_active"
+    },
+    "type\u003dore_washing_plant_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/processing/advanced/ore_washing_plant_active",
+      "y": 180
+    },
+    "type\u003dore_washing_plant_active,facing\u003dwest": {
+      "model": "ic2:block/machine/processing/advanced/ore_washing_plant_active",
+      "y": 270
+    },
+    "type\u003dore_washing_plant_active,facing\u003deast": {
+      "model": "ic2:block/machine/processing/advanced/ore_washing_plant_active",
+      "y": 90
+    },
+    "type\u003dadvanced_miner,facing\u003ddown": {
+      "model": "ic2:block/machine/resource/advanced_miner",
+      "x": 90
+    },
+    "type\u003dadvanced_miner,facing\u003dup": {
+      "model": "ic2:block/machine/resource/advanced_miner",
+      "x": 270
+    },
+    "type\u003dadvanced_miner,facing\u003dnorth": {
+      "model": "ic2:block/machine/resource/advanced_miner"
+    },
+    "type\u003dadvanced_miner,facing\u003dsouth": {
+      "model": "ic2:block/machine/resource/advanced_miner",
+      "y": 180
+    },
+    "type\u003dadvanced_miner,facing\u003dwest": {
+      "model": "ic2:block/machine/resource/advanced_miner",
+      "y": 270
+    },
+    "type\u003dadvanced_miner,facing\u003deast": {
+      "model": "ic2:block/machine/resource/advanced_miner",
+      "y": 90
+    },
+    "type\u003dadvanced_miner_active,facing\u003ddown": {
+      "model": "ic2:block/machine/resource/advanced_miner_active",
+      "x": 90
+    },
+    "type\u003dadvanced_miner_active,facing\u003dup": {
+      "model": "ic2:block/machine/resource/advanced_miner_active",
+      "x": 270
+    },
+    "type\u003dadvanced_miner_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/resource/advanced_miner_active"
+    },
+    "type\u003dadvanced_miner_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/resource/advanced_miner_active",
+      "y": 180
+    },
+    "type\u003dadvanced_miner_active,facing\u003dwest": {
+      "model": "ic2:block/machine/resource/advanced_miner_active",
+      "y": 270
+    },
+    "type\u003dadvanced_miner_active,facing\u003deast": {
+      "model": "ic2:block/machine/resource/advanced_miner_active",
+      "y": 90
+    },
+    "type\u003dcrop_harvester,facing\u003ddown": {
+      "model": "ic2:block/machine/resource/crop_harvester",
+      "x": 90
+    },
+    "type\u003dcrop_harvester,facing\u003dup": {
+      "model": "ic2:block/machine/resource/crop_harvester",
+      "x": 270
+    },
+    "type\u003dcrop_harvester,facing\u003dnorth": {
+      "model": "ic2:block/machine/resource/crop_harvester"
+    },
+    "type\u003dcrop_harvester,facing\u003dsouth": {
+      "model": "ic2:block/machine/resource/crop_harvester",
+      "y": 180
+    },
+    "type\u003dcrop_harvester,facing\u003dwest": {
+      "model": "ic2:block/machine/resource/crop_harvester",
+      "y": 270
+    },
+    "type\u003dcrop_harvester,facing\u003deast": {
+      "model": "ic2:block/machine/resource/crop_harvester",
+      "y": 90
+    },
+    "type\u003dcropmatron,facing\u003ddown": {
+      "model": "ic2:block/machine/resource/cropmatron",
+      "x": 90
+    },
+    "type\u003dcropmatron,facing\u003dup": {
+      "model": "ic2:block/machine/resource/cropmatron",
+      "x": 270
+    },
+    "type\u003dcropmatron,facing\u003dnorth": {
+      "model": "ic2:block/machine/resource/cropmatron"
+    },
+    "type\u003dcropmatron,facing\u003dsouth": {
+      "model": "ic2:block/machine/resource/cropmatron",
+      "y": 180
+    },
+    "type\u003dcropmatron,facing\u003dwest": {
+      "model": "ic2:block/machine/resource/cropmatron",
+      "y": 270
+    },
+    "type\u003dcropmatron,facing\u003deast": {
+      "model": "ic2:block/machine/resource/cropmatron",
+      "y": 90
+    },
+    "type\u003dminer,facing\u003ddown": {
+      "model": "ic2:block/machine/resource/miner",
+      "x": 90
+    },
+    "type\u003dminer,facing\u003dup": {
+      "model": "ic2:block/machine/resource/miner",
+      "x": 270
+    },
+    "type\u003dminer,facing\u003dnorth": {
+      "model": "ic2:block/machine/resource/miner"
+    },
+    "type\u003dminer,facing\u003dsouth": {
+      "model": "ic2:block/machine/resource/miner",
+      "y": 180
+    },
+    "type\u003dminer,facing\u003dwest": {
+      "model": "ic2:block/machine/resource/miner",
+      "y": 270
+    },
+    "type\u003dminer,facing\u003deast": {
+      "model": "ic2:block/machine/resource/miner",
+      "y": 90
+    },
+    "type\u003dminer_active,facing\u003ddown": {
+      "model": "ic2:block/machine/resource/miner_active",
+      "x": 90
+    },
+    "type\u003dminer_active,facing\u003dup": {
+      "model": "ic2:block/machine/resource/miner_active",
+      "x": 270
+    },
+    "type\u003dminer_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/resource/miner_active"
+    },
+    "type\u003dminer_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/resource/miner_active",
+      "y": 180
+    },
+    "type\u003dminer_active,facing\u003dwest": {
+      "model": "ic2:block/machine/resource/miner_active",
+      "y": 270
+    },
+    "type\u003dminer_active,facing\u003deast": {
+      "model": "ic2:block/machine/resource/miner_active",
+      "y": 90
+    },
+    "type\u003dmatter_generator,facing\u003ddown": {
+      "model": "ic2:block/machine/uu/matter_generator",
+      "x": 90
+    },
+    "type\u003dmatter_generator,facing\u003dup": {
+      "model": "ic2:block/machine/uu/matter_generator",
+      "x": 270
+    },
+    "type\u003dmatter_generator,facing\u003dnorth": {
+      "model": "ic2:block/machine/uu/matter_generator"
+    },
+    "type\u003dmatter_generator,facing\u003dsouth": {
+      "model": "ic2:block/machine/uu/matter_generator",
+      "y": 180
+    },
+    "type\u003dmatter_generator,facing\u003dwest": {
+      "model": "ic2:block/machine/uu/matter_generator",
+      "y": 270
+    },
+    "type\u003dmatter_generator,facing\u003deast": {
+      "model": "ic2:block/machine/uu/matter_generator",
+      "y": 90
+    },
+    "type\u003dmatter_generator_active,facing\u003ddown": {
+      "model": "ic2:block/machine/uu/matter_generator_active",
+      "x": 90
+    },
+    "type\u003dmatter_generator_active,facing\u003dup": {
+      "model": "ic2:block/machine/uu/matter_generator_active",
+      "x": 270
+    },
+    "type\u003dmatter_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/uu/matter_generator_active"
+    },
+    "type\u003dmatter_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/uu/matter_generator_active",
+      "y": 180
+    },
+    "type\u003dmatter_generator_active,facing\u003dwest": {
+      "model": "ic2:block/machine/uu/matter_generator_active",
+      "y": 270
+    },
+    "type\u003dmatter_generator_active,facing\u003deast": {
+      "model": "ic2:block/machine/uu/matter_generator_active",
+      "y": 90
+    },
+    "type\u003dpattern_storage,facing\u003ddown": {
+      "model": "ic2:block/machine/uu/pattern_storage",
+      "x": 90
+    },
+    "type\u003dpattern_storage,facing\u003dup": {
+      "model": "ic2:block/machine/uu/pattern_storage",
+      "x": 270
+    },
+    "type\u003dpattern_storage,facing\u003dnorth": {
+      "model": "ic2:block/machine/uu/pattern_storage"
+    },
+    "type\u003dpattern_storage,facing\u003dsouth": {
+      "model": "ic2:block/machine/uu/pattern_storage",
+      "y": 180
+    },
+    "type\u003dpattern_storage,facing\u003dwest": {
+      "model": "ic2:block/machine/uu/pattern_storage",
+      "y": 270
+    },
+    "type\u003dpattern_storage,facing\u003deast": {
+      "model": "ic2:block/machine/uu/pattern_storage",
+      "y": 90
+    },
+    "type\u003dreplicator,facing\u003ddown": {
+      "model": "ic2:block/machine/uu/replicator",
+      "x": 90
+    },
+    "type\u003dreplicator,facing\u003dup": {
+      "model": "ic2:block/machine/uu/replicator",
+      "x": 270
+    },
+    "type\u003dreplicator,facing\u003dnorth": {
+      "model": "ic2:block/machine/uu/replicator"
+    },
+    "type\u003dreplicator,facing\u003dsouth": {
+      "model": "ic2:block/machine/uu/replicator",
+      "y": 180
+    },
+    "type\u003dreplicator,facing\u003dwest": {
+      "model": "ic2:block/machine/uu/replicator",
+      "y": 270
+    },
+    "type\u003dreplicator,facing\u003deast": {
+      "model": "ic2:block/machine/uu/replicator",
+      "y": 90
+    },
+    "type\u003dreplicator_active,facing\u003ddown": {
+      "model": "ic2:block/machine/uu/replicator_active",
+      "x": 90
+    },
+    "type\u003dreplicator_active,facing\u003dup": {
+      "model": "ic2:block/machine/uu/replicator_active",
+      "x": 270
+    },
+    "type\u003dreplicator_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/uu/replicator_active"
+    },
+    "type\u003dreplicator_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/uu/replicator_active",
+      "y": 180
+    },
+    "type\u003dreplicator_active,facing\u003dwest": {
+      "model": "ic2:block/machine/uu/replicator_active",
+      "y": 270
+    },
+    "type\u003dreplicator_active,facing\u003deast": {
+      "model": "ic2:block/machine/uu/replicator_active",
+      "y": 90
+    },
+    "type\u003dscanner,facing\u003ddown": {
+      "model": "ic2:block/machine/uu/scanner",
+      "x": 90
+    },
+    "type\u003dscanner,facing\u003dup": {
+      "model": "ic2:block/machine/uu/scanner",
+      "x": 270
+    },
+    "type\u003dscanner,facing\u003dnorth": {
+      "model": "ic2:block/machine/uu/scanner"
+    },
+    "type\u003dscanner,facing\u003dsouth": {
+      "model": "ic2:block/machine/uu/scanner",
+      "y": 180
+    },
+    "type\u003dscanner,facing\u003dwest": {
+      "model": "ic2:block/machine/uu/scanner",
+      "y": 270
+    },
+    "type\u003dscanner,facing\u003deast": {
+      "model": "ic2:block/machine/uu/scanner",
+      "y": 90
+    },
+    "type\u003dscanner_active,facing\u003ddown": {
+      "model": "ic2:block/machine/uu/scanner",
+      "x": 90
+    },
+    "type\u003dscanner_active,facing\u003dup": {
+      "model": "ic2:block/machine/uu/scanner",
+      "x": 270
+    },
+    "type\u003dscanner_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/uu/scanner"
+    },
+    "type\u003dscanner_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/uu/scanner",
+      "y": 180
+    },
+    "type\u003dscanner_active,facing\u003dwest": {
+      "model": "ic2:block/machine/uu/scanner",
+      "y": 270
+    },
+    "type\u003dscanner_active,facing\u003deast": {
+      "model": "ic2:block/machine/uu/scanner",
+      "y": 90
+    },
+    "type\u003denergy_o_mat,facing\u003ddown": {
+      "model": "ic2:block/personal/energy_o_mat",
+      "x": 90
+    },
+    "type\u003denergy_o_mat,facing\u003dup": {
+      "model": "ic2:block/personal/energy_o_mat",
+      "x": 270
+    },
+    "type\u003denergy_o_mat,facing\u003dnorth": {
+      "model": "ic2:block/personal/energy_o_mat"
+    },
+    "type\u003denergy_o_mat,facing\u003dsouth": {
+      "model": "ic2:block/personal/energy_o_mat",
+      "y": 180
+    },
+    "type\u003denergy_o_mat,facing\u003dwest": {
+      "model": "ic2:block/personal/energy_o_mat",
+      "y": 270
+    },
+    "type\u003denergy_o_mat,facing\u003deast": {
+      "model": "ic2:block/personal/energy_o_mat",
+      "y": 90
+    },
+    "type\u003dpersonal_chest,facing\u003ddown": {
+      "model": "ic2:block/personal/personal_chest",
+      "x": 90
+    },
+    "type\u003dpersonal_chest,facing\u003dup": {
+      "model": "ic2:block/personal/personal_chest",
+      "x": 270
+    },
+    "type\u003dpersonal_chest,facing\u003dnorth": {
+      "model": "ic2:block/personal/personal_chest"
+    },
+    "type\u003dpersonal_chest,facing\u003dsouth": {
+      "model": "ic2:block/personal/personal_chest",
+      "y": 180
+    },
+    "type\u003dpersonal_chest,facing\u003dwest": {
+      "model": "ic2:block/personal/personal_chest",
+      "y": 270
+    },
+    "type\u003dpersonal_chest,facing\u003deast": {
+      "model": "ic2:block/personal/personal_chest",
+      "y": 90
+    },
+    "type\u003dtrade_o_mat,facing\u003ddown": {
+      "model": "ic2:block/personal/trade_o_mat",
+      "x": 90
+    },
+    "type\u003dtrade_o_mat,facing\u003dup": {
+      "model": "ic2:block/personal/trade_o_mat",
+      "x": 270
+    },
+    "type\u003dtrade_o_mat,facing\u003dnorth": {
+      "model": "ic2:block/personal/trade_o_mat"
+    },
+    "type\u003dtrade_o_mat,facing\u003dsouth": {
+      "model": "ic2:block/personal/trade_o_mat",
+      "y": 180
+    },
+    "type\u003dtrade_o_mat,facing\u003dwest": {
+      "model": "ic2:block/personal/trade_o_mat",
+      "y": 270
+    },
+    "type\u003dtrade_o_mat,facing\u003deast": {
+      "model": "ic2:block/personal/trade_o_mat",
+      "y": 90
+    },
+    "type\u003dtrade_o_mat_active,facing\u003ddown": {
+      "model": "ic2:block/personal/wireless_trade_o_mat",
+      "x": 90
+    },
+    "type\u003dtrade_o_mat_active,facing\u003dup": {
+      "model": "ic2:block/personal/wireless_trade_o_mat",
+      "x": 270
+    },
+    "type\u003dtrade_o_mat_active,facing\u003dnorth": {
+      "model": "ic2:block/personal/wireless_trade_o_mat"
+    },
+    "type\u003dtrade_o_mat_active,facing\u003dsouth": {
+      "model": "ic2:block/personal/wireless_trade_o_mat",
+      "y": 180
+    },
+    "type\u003dtrade_o_mat_active,facing\u003dwest": {
+      "model": "ic2:block/personal/wireless_trade_o_mat",
+      "y": 270
+    },
+    "type\u003dtrade_o_mat_active,facing\u003deast": {
+      "model": "ic2:block/personal/wireless_trade_o_mat",
+      "y": 90
+    },
+    "type\u003dtrading_terminal,facing\u003ddown": {
+      "model": "ic2:block/personal/trading_terminal",
+      "x": 90
+    },
+    "type\u003dtrading_terminal,facing\u003dup": {
+      "model": "ic2:block/personal/trading_terminal",
+      "x": 270
+    },
+    "type\u003dtrading_terminal,facing\u003dnorth": {
+      "model": "ic2:block/personal/trading_terminal"
+    },
+    "type\u003dtrading_terminal,facing\u003dsouth": {
+      "model": "ic2:block/personal/trading_terminal",
+      "y": 180
+    },
+    "type\u003dtrading_terminal,facing\u003dwest": {
+      "model": "ic2:block/personal/trading_terminal",
+      "y": 270
+    },
+    "type\u003dtrading_terminal,facing\u003deast": {
+      "model": "ic2:block/personal/trading_terminal",
+      "y": 90
+    },
+    "type\u003dcable,facing\u003ddown": {
+      "model": "ic2:block/wiring/cable",
+      "x": 90
+    },
+    "type\u003dcable,facing\u003dup": {
+      "model": "ic2:block/wiring/cable",
+      "x": 270
+    },
+    "type\u003dcable,facing\u003dnorth": {
+      "model": "ic2:block/wiring/cable"
+    },
+    "type\u003dcable,facing\u003dsouth": {
+      "model": "ic2:block/wiring/cable",
+      "y": 180
+    },
+    "type\u003dcable,facing\u003dwest": {
+      "model": "ic2:block/wiring/cable",
+      "y": 270
+    },
+    "type\u003dcable,facing\u003deast": {
+      "model": "ic2:block/wiring/cable",
+      "y": 90
+    },
+    "type\u003ddetector_cable,facing\u003ddown": {
+      "model": "ic2:block/wiring/cable",
+      "x": 90
+    },
+    "type\u003ddetector_cable,facing\u003dup": {
+      "model": "ic2:block/wiring/cable",
+      "x": 270
+    },
+    "type\u003ddetector_cable,facing\u003dnorth": {
+      "model": "ic2:block/wiring/cable"
+    },
+    "type\u003ddetector_cable,facing\u003dsouth": {
+      "model": "ic2:block/wiring/cable",
+      "y": 180
+    },
+    "type\u003ddetector_cable,facing\u003dwest": {
+      "model": "ic2:block/wiring/cable",
+      "y": 270
+    },
+    "type\u003ddetector_cable,facing\u003deast": {
+      "model": "ic2:block/wiring/cable",
+      "y": 90
+    },
+    "type\u003dsplitter_cable,facing\u003ddown": {
+      "model": "ic2:block/wiring/cable",
+      "x": 90
+    },
+    "type\u003dsplitter_cable,facing\u003dup": {
+      "model": "ic2:block/wiring/cable",
+      "x": 270
+    },
+    "type\u003dsplitter_cable,facing\u003dnorth": {
+      "model": "ic2:block/wiring/cable"
+    },
+    "type\u003dsplitter_cable,facing\u003dsouth": {
+      "model": "ic2:block/wiring/cable",
+      "y": 180
+    },
+    "type\u003dsplitter_cable,facing\u003dwest": {
+      "model": "ic2:block/wiring/cable",
+      "y": 270
+    },
+    "type\u003dsplitter_cable,facing\u003deast": {
+      "model": "ic2:block/wiring/cable",
+      "y": 90
+    },
+    "type\u003dchargepad_batbox,facing\u003ddown": {
+      "model": "ic2:block/wiring/chargepad/chargepad_batbox",
+      "x": 90
+    },
+    "type\u003dchargepad_batbox,facing\u003dup": {
+      "model": "ic2:block/wiring/chargepad/chargepad_batbox",
+      "x": 270
+    },
+    "type\u003dchargepad_batbox,facing\u003dnorth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_batbox"
+    },
+    "type\u003dchargepad_batbox,facing\u003dsouth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_batbox",
+      "y": 180
+    },
+    "type\u003dchargepad_batbox,facing\u003dwest": {
+      "model": "ic2:block/wiring/chargepad/chargepad_batbox",
+      "y": 270
+    },
+    "type\u003dchargepad_batbox,facing\u003deast": {
+      "model": "ic2:block/wiring/chargepad/chargepad_batbox",
+      "y": 90
+    },
+    "type\u003dchargepad_batbox_active,facing\u003ddown": {
+      "model": "ic2:block/wiring/chargepad/chargepad_batbox_active",
+      "x": 90
+    },
+    "type\u003dchargepad_batbox_active,facing\u003dup": {
+      "model": "ic2:block/wiring/chargepad/chargepad_batbox_active",
+      "x": 270
+    },
+    "type\u003dchargepad_batbox_active,facing\u003dnorth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_batbox_active"
+    },
+    "type\u003dchargepad_batbox_active,facing\u003dsouth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_batbox_active",
+      "y": 180
+    },
+    "type\u003dchargepad_batbox_active,facing\u003dwest": {
+      "model": "ic2:block/wiring/chargepad/chargepad_batbox_active",
+      "y": 270
+    },
+    "type\u003dchargepad_batbox_active,facing\u003deast": {
+      "model": "ic2:block/wiring/chargepad/chargepad_batbox_active",
+      "y": 90
+    },
+    "type\u003dchargepad_cesu,facing\u003ddown": {
+      "model": "ic2:block/wiring/chargepad/chargepad_cesu",
+      "x": 90
+    },
+    "type\u003dchargepad_cesu,facing\u003dup": {
+      "model": "ic2:block/wiring/chargepad/chargepad_cesu",
+      "x": 270
+    },
+    "type\u003dchargepad_cesu,facing\u003dnorth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_cesu"
+    },
+    "type\u003dchargepad_cesu,facing\u003dsouth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_cesu",
+      "y": 180
+    },
+    "type\u003dchargepad_cesu,facing\u003dwest": {
+      "model": "ic2:block/wiring/chargepad/chargepad_cesu",
+      "y": 270
+    },
+    "type\u003dchargepad_cesu,facing\u003deast": {
+      "model": "ic2:block/wiring/chargepad/chargepad_cesu",
+      "y": 90
+    },
+    "type\u003dchargepad_cesu_active,facing\u003ddown": {
+      "model": "ic2:block/wiring/chargepad/chargepad_cesu_active",
+      "x": 90
+    },
+    "type\u003dchargepad_cesu_active,facing\u003dup": {
+      "model": "ic2:block/wiring/chargepad/chargepad_cesu_active",
+      "x": 270
+    },
+    "type\u003dchargepad_cesu_active,facing\u003dnorth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_cesu_active"
+    },
+    "type\u003dchargepad_cesu_active,facing\u003dsouth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_cesu_active",
+      "y": 180
+    },
+    "type\u003dchargepad_cesu_active,facing\u003dwest": {
+      "model": "ic2:block/wiring/chargepad/chargepad_cesu_active",
+      "y": 270
+    },
+    "type\u003dchargepad_cesu_active,facing\u003deast": {
+      "model": "ic2:block/wiring/chargepad/chargepad_cesu_active",
+      "y": 90
+    },
+    "type\u003dchargepad_mfe,facing\u003ddown": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfe",
+      "x": 90
+    },
+    "type\u003dchargepad_mfe,facing\u003dup": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfe",
+      "x": 270
+    },
+    "type\u003dchargepad_mfe,facing\u003dnorth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfe"
+    },
+    "type\u003dchargepad_mfe,facing\u003dsouth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfe",
+      "y": 180
+    },
+    "type\u003dchargepad_mfe,facing\u003dwest": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfe",
+      "y": 270
+    },
+    "type\u003dchargepad_mfe,facing\u003deast": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfe",
+      "y": 90
+    },
+    "type\u003dchargepad_mfe_active,facing\u003ddown": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfe_active",
+      "x": 90
+    },
+    "type\u003dchargepad_mfe_active,facing\u003dup": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfe_active",
+      "x": 270
+    },
+    "type\u003dchargepad_mfe_active,facing\u003dnorth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfe_active"
+    },
+    "type\u003dchargepad_mfe_active,facing\u003dsouth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfe_active",
+      "y": 180
+    },
+    "type\u003dchargepad_mfe_active,facing\u003dwest": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfe_active",
+      "y": 270
+    },
+    "type\u003dchargepad_mfe_active,facing\u003deast": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfe_active",
+      "y": 90
+    },
+    "type\u003dchargepad_mfsu,facing\u003ddown": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfsu",
+      "x": 90
+    },
+    "type\u003dchargepad_mfsu,facing\u003dup": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfsu",
+      "x": 270
+    },
+    "type\u003dchargepad_mfsu,facing\u003dnorth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfsu"
+    },
+    "type\u003dchargepad_mfsu,facing\u003dsouth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfsu",
+      "y": 180
+    },
+    "type\u003dchargepad_mfsu,facing\u003dwest": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfsu",
+      "y": 270
+    },
+    "type\u003dchargepad_mfsu,facing\u003deast": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfsu",
+      "y": 90
+    },
+    "type\u003dchargepad_mfsu_active,facing\u003ddown": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfsu_active",
+      "x": 90
+    },
+    "type\u003dchargepad_mfsu_active,facing\u003dup": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfsu_active",
+      "x": 270
+    },
+    "type\u003dchargepad_mfsu_active,facing\u003dnorth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfsu_active"
+    },
+    "type\u003dchargepad_mfsu_active,facing\u003dsouth": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfsu_active",
+      "y": 180
+    },
+    "type\u003dchargepad_mfsu_active,facing\u003dwest": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfsu_active",
+      "y": 270
+    },
+    "type\u003dchargepad_mfsu_active,facing\u003deast": {
+      "model": "ic2:block/wiring/chargepad/chargepad_mfsu_active",
+      "y": 90
+    },
+    "type\u003dbatbox,facing\u003ddown": {
+      "model": "ic2:block/wiring/storage/batbox",
+      "x": 90
+    },
+    "type\u003dbatbox,facing\u003dup": {
+      "model": "ic2:block/wiring/storage/batbox",
+      "x": 270
+    },
+    "type\u003dbatbox,facing\u003dnorth": {
+      "model": "ic2:block/wiring/storage/batbox"
+    },
+    "type\u003dbatbox,facing\u003dsouth": {
+      "model": "ic2:block/wiring/storage/batbox",
+      "y": 180
+    },
+    "type\u003dbatbox,facing\u003dwest": {
+      "model": "ic2:block/wiring/storage/batbox",
+      "y": 270
+    },
+    "type\u003dbatbox,facing\u003deast": {
+      "model": "ic2:block/wiring/storage/batbox",
+      "y": 90
+    },
+    "type\u003dcesu,facing\u003ddown": {
+      "model": "ic2:block/wiring/storage/cesu",
+      "x": 90
+    },
+    "type\u003dcesu,facing\u003dup": {
+      "model": "ic2:block/wiring/storage/cesu",
+      "x": 270
+    },
+    "type\u003dcesu,facing\u003dnorth": {
+      "model": "ic2:block/wiring/storage/cesu"
+    },
+    "type\u003dcesu,facing\u003dsouth": {
+      "model": "ic2:block/wiring/storage/cesu",
+      "y": 180
+    },
+    "type\u003dcesu,facing\u003dwest": {
+      "model": "ic2:block/wiring/storage/cesu",
+      "y": 270
+    },
+    "type\u003dcesu,facing\u003deast": {
+      "model": "ic2:block/wiring/storage/cesu",
+      "y": 90
+    },
+    "type\u003dmfe,facing\u003ddown": {
+      "model": "ic2:block/wiring/storage/mfe",
+      "x": 90
+    },
+    "type\u003dmfe,facing\u003dup": {
+      "model": "ic2:block/wiring/storage/mfe",
+      "x": 270
+    },
+    "type\u003dmfe,facing\u003dnorth": {
+      "model": "ic2:block/wiring/storage/mfe"
+    },
+    "type\u003dmfe,facing\u003dsouth": {
+      "model": "ic2:block/wiring/storage/mfe",
+      "y": 180
+    },
+    "type\u003dmfe,facing\u003dwest": {
+      "model": "ic2:block/wiring/storage/mfe",
+      "y": 270
+    },
+    "type\u003dmfe,facing\u003deast": {
+      "model": "ic2:block/wiring/storage/mfe",
+      "y": 90
+    },
+    "type\u003dmfsu,facing\u003ddown": {
+      "model": "ic2:block/wiring/storage/mfsu",
+      "x": 90
+    },
+    "type\u003dmfsu,facing\u003dup": {
+      "model": "ic2:block/wiring/storage/mfsu",
+      "x": 270
+    },
+    "type\u003dmfsu,facing\u003dnorth": {
+      "model": "ic2:block/wiring/storage/mfsu"
+    },
+    "type\u003dmfsu,facing\u003dsouth": {
+      "model": "ic2:block/wiring/storage/mfsu",
+      "y": 180
+    },
+    "type\u003dmfsu,facing\u003dwest": {
+      "model": "ic2:block/wiring/storage/mfsu",
+      "y": 270
+    },
+    "type\u003dmfsu,facing\u003deast": {
+      "model": "ic2:block/wiring/storage/mfsu",
+      "y": 90
+    },
+    "type\u003delectrolyzer,facing\u003ddown": {
+      "model": "ic2:block/wiring/storage/electrolyzer",
+      "x": 90
+    },
+    "type\u003delectrolyzer,facing\u003dup": {
+      "model": "ic2:block/wiring/storage/electrolyzer",
+      "x": 270
+    },
+    "type\u003delectrolyzer,facing\u003dnorth": {
+      "model": "ic2:block/wiring/storage/electrolyzer"
+    },
+    "type\u003delectrolyzer,facing\u003dsouth": {
+      "model": "ic2:block/wiring/storage/electrolyzer",
+      "y": 180
+    },
+    "type\u003delectrolyzer,facing\u003dwest": {
+      "model": "ic2:block/wiring/storage/electrolyzer",
+      "y": 270
+    },
+    "type\u003delectrolyzer,facing\u003deast": {
+      "model": "ic2:block/wiring/storage/electrolyzer",
+      "y": 90
+    },
+    "type\u003delectrolyzer_active,facing\u003ddown": {
+      "model": "ic2:block/wiring/storage/electrolyzer_active",
+      "x": 90
+    },
+    "type\u003delectrolyzer_active,facing\u003dup": {
+      "model": "ic2:block/wiring/storage/electrolyzer_active",
+      "x": 270
+    },
+    "type\u003delectrolyzer_active,facing\u003dnorth": {
+      "model": "ic2:block/wiring/storage/electrolyzer_active"
+    },
+    "type\u003delectrolyzer_active,facing\u003dsouth": {
+      "model": "ic2:block/wiring/storage/electrolyzer_active",
+      "y": 180
+    },
+    "type\u003delectrolyzer_active,facing\u003dwest": {
+      "model": "ic2:block/wiring/storage/electrolyzer_active",
+      "y": 270
+    },
+    "type\u003delectrolyzer_active,facing\u003deast": {
+      "model": "ic2:block/wiring/storage/electrolyzer_active",
+      "y": 90
+    },
+    "type\u003dlv_transformer,facing\u003ddown": {
+      "model": "ic2:block/wiring/transformer/lv_transformer",
+      "x": 90
+    },
+    "type\u003dlv_transformer,facing\u003dup": {
+      "model": "ic2:block/wiring/transformer/lv_transformer",
+      "x": 270
+    },
+    "type\u003dlv_transformer,facing\u003dnorth": {
+      "model": "ic2:block/wiring/transformer/lv_transformer"
+    },
+    "type\u003dlv_transformer,facing\u003dsouth": {
+      "model": "ic2:block/wiring/transformer/lv_transformer",
+      "y": 180
+    },
+    "type\u003dlv_transformer,facing\u003dwest": {
+      "model": "ic2:block/wiring/transformer/lv_transformer",
+      "y": 270
+    },
+    "type\u003dlv_transformer,facing\u003deast": {
+      "model": "ic2:block/wiring/transformer/lv_transformer",
+      "y": 90
+    },
+    "type\u003dmv_transformer,facing\u003ddown": {
+      "model": "ic2:block/wiring/transformer/mv_transformer",
+      "x": 90
+    },
+    "type\u003dmv_transformer,facing\u003dup": {
+      "model": "ic2:block/wiring/transformer/mv_transformer",
+      "x": 270
+    },
+    "type\u003dmv_transformer,facing\u003dnorth": {
+      "model": "ic2:block/wiring/transformer/mv_transformer"
+    },
+    "type\u003dmv_transformer,facing\u003dsouth": {
+      "model": "ic2:block/wiring/transformer/mv_transformer",
+      "y": 180
+    },
+    "type\u003dmv_transformer,facing\u003dwest": {
+      "model": "ic2:block/wiring/transformer/mv_transformer",
+      "y": 270
+    },
+    "type\u003dmv_transformer,facing\u003deast": {
+      "model": "ic2:block/wiring/transformer/mv_transformer",
+      "y": 90
+    },
+    "type\u003dhv_transformer,facing\u003ddown": {
+      "model": "ic2:block/wiring/transformer/hv_transformer",
+      "x": 90
+    },
+    "type\u003dhv_transformer,facing\u003dup": {
+      "model": "ic2:block/wiring/transformer/hv_transformer",
+      "x": 270
+    },
+    "type\u003dhv_transformer,facing\u003dnorth": {
+      "model": "ic2:block/wiring/transformer/hv_transformer"
+    },
+    "type\u003dhv_transformer,facing\u003dsouth": {
+      "model": "ic2:block/wiring/transformer/hv_transformer",
+      "y": 180
+    },
+    "type\u003dhv_transformer,facing\u003dwest": {
+      "model": "ic2:block/wiring/transformer/hv_transformer",
+      "y": 270
+    },
+    "type\u003dhv_transformer,facing\u003deast": {
+      "model": "ic2:block/wiring/transformer/hv_transformer",
+      "y": 90
+    },
+    "type\u003dev_transformer,facing\u003ddown": {
+      "model": "ic2:block/wiring/transformer/ev_transformer",
+      "x": 90
+    },
+    "type\u003dev_transformer,facing\u003dup": {
+      "model": "ic2:block/wiring/transformer/ev_transformer",
+      "x": 270
+    },
+    "type\u003dev_transformer,facing\u003dnorth": {
+      "model": "ic2:block/wiring/transformer/ev_transformer"
+    },
+    "type\u003dev_transformer,facing\u003dsouth": {
+      "model": "ic2:block/wiring/transformer/ev_transformer",
+      "y": 180
+    },
+    "type\u003dev_transformer,facing\u003dwest": {
+      "model": "ic2:block/wiring/transformer/ev_transformer",
+      "y": 270
+    },
+    "type\u003dev_transformer,facing\u003deast": {
+      "model": "ic2:block/wiring/transformer/ev_transformer",
+      "y": 90
+    },
+    "type\u003dtank,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/tank",
+      "x": 90
+    },
+    "type\u003dtank,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/tank",
+      "x": 270
+    },
+    "type\u003dtank,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/tank"
+    },
+    "type\u003dtank,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/tank",
+      "y": 180
+    },
+    "type\u003dtank,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/tank",
+      "y": 270
+    },
+    "type\u003dtank,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/tank",
+      "y": 90
+    },
+    "type\u003dchunk_loader,facing\u003ddown": {
+      "model": "ic2:block/machine/chunk_loader",
+      "x": 90
+    },
+    "type\u003dchunk_loader,facing\u003dup": {
+      "model": "ic2:block/machine/chunk_loader",
+      "x": 270
+    },
+    "type\u003dchunk_loader,facing\u003dnorth": {
+      "model": "ic2:block/machine/chunk_loader"
+    },
+    "type\u003dchunk_loader,facing\u003dsouth": {
+      "model": "ic2:block/machine/chunk_loader",
+      "y": 180
+    },
+    "type\u003dchunk_loader,facing\u003dwest": {
+      "model": "ic2:block/machine/chunk_loader",
+      "y": 270
+    },
+    "type\u003dchunk_loader,facing\u003deast": {
+      "model": "ic2:block/machine/chunk_loader",
+      "y": 90
+    },
+    "type\u003dchunk_loader_active,facing\u003ddown": {
+      "model": "ic2:block/machine/chunk_loader_active",
+      "x": 90
+    },
+    "type\u003dchunk_loader_active,facing\u003dup": {
+      "model": "ic2:block/machine/chunk_loader_active",
+      "x": 270
+    },
+    "type\u003dchunk_loader_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/chunk_loader_active"
+    },
+    "type\u003dchunk_loader_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/chunk_loader_active",
+      "y": 180
+    },
+    "type\u003dchunk_loader_active,facing\u003dwest": {
+      "model": "ic2:block/machine/chunk_loader_active",
+      "y": 270
+    },
+    "type\u003dchunk_loader_active,facing\u003deast": {
+      "model": "ic2:block/machine/chunk_loader_active",
+      "y": 90
+    },
+    "type\u003ditem_buffer_2,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/item_buffer_2",
+      "x": 90
+    },
+    "type\u003ditem_buffer_2,facing\u003dup": {
+      "model": "ic2:block/machine/misc/item_buffer_2",
+      "x": 270
+    },
+    "type\u003ditem_buffer_2,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/item_buffer_2"
+    },
+    "type\u003ditem_buffer_2,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/item_buffer_2",
+      "y": 180
+    },
+    "type\u003ditem_buffer_2,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/item_buffer_2",
+      "y": 270
+    },
+    "type\u003ditem_buffer_2,facing\u003deast": {
+      "model": "ic2:block/machine/misc/item_buffer_2",
+      "y": 90
+    },
+    "type\u003drci_rsh,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/rci_rsh",
+      "x": 90
+    },
+    "type\u003drci_rsh,facing\u003dup": {
+      "model": "ic2:block/machine/misc/rci_rsh",
+      "x": 270
+    },
+    "type\u003drci_rsh,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/rci_rsh"
+    },
+    "type\u003drci_rsh,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/rci_rsh",
+      "y": 180
+    },
+    "type\u003drci_rsh,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/rci_rsh",
+      "y": 270
+    },
+    "type\u003drci_rsh,facing\u003deast": {
+      "model": "ic2:block/machine/misc/rci_rsh",
+      "y": 90
+    },
+    "type\u003drci_rsh_active,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/rci_rsh_active",
+      "x": 90
+    },
+    "type\u003drci_rsh_active,facing\u003dup": {
+      "model": "ic2:block/machine/misc/rci_rsh_active",
+      "x": 270
+    },
+    "type\u003drci_rsh_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/rci_rsh_active"
+    },
+    "type\u003drci_rsh_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/rci_rsh_active",
+      "y": 180
+    },
+    "type\u003drci_rsh_active,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/rci_rsh_active",
+      "y": 270
+    },
+    "type\u003drci_rsh_active,facing\u003deast": {
+      "model": "ic2:block/machine/misc/rci_rsh_active",
+      "y": 90
+    },
+    "type\u003drci_lzh,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/rci_lzh",
+      "x": 90
+    },
+    "type\u003drci_lzh,facing\u003dup": {
+      "model": "ic2:block/machine/misc/rci_lzh",
+      "x": 270
+    },
+    "type\u003drci_lzh,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/rci_lzh"
+    },
+    "type\u003drci_lzh,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/rci_lzh",
+      "y": 180
+    },
+    "type\u003drci_lzh,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/rci_lzh",
+      "y": 270
+    },
+    "type\u003drci_lzh,facing\u003deast": {
+      "model": "ic2:block/machine/misc/rci_lzh",
+      "y": 90
+    },
+    "type\u003drci_lzh_active,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/rci_lzh_active",
+      "x": 90
+    },
+    "type\u003drci_lzh_active,facing\u003dup": {
+      "model": "ic2:block/machine/misc/rci_lzh_active",
+      "x": 270
+    },
+    "type\u003drci_lzh_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/rci_lzh_active"
+    },
+    "type\u003drci_lzh_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/rci_lzh_active",
+      "y": 180
+    },
+    "type\u003drci_lzh_active,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/rci_lzh_active",
+      "y": 270
+    },
+    "type\u003drci_lzh_active,facing\u003deast": {
+      "model": "ic2:block/machine/misc/rci_lzh_active",
+      "y": 90
+    },
+    "type\u003dcrop,facing\u003ddown": {
+      "model": "ic2:block/crop/crop",
+      "x": 90
+    },
+    "type\u003dcrop,facing\u003dup": {
+      "model": "ic2:block/crop/crop",
+      "x": 270
+    },
+    "type\u003dcrop,facing\u003dnorth": {
+      "model": "ic2:block/crop/crop"
+    },
+    "type\u003dcrop,facing\u003dsouth": {
+      "model": "ic2:block/crop/crop",
+      "y": 180
+    },
+    "type\u003dcrop,facing\u003dwest": {
+      "model": "ic2:block/crop/crop",
+      "y": 270
+    },
+    "type\u003dcrop,facing\u003deast": {
+      "model": "ic2:block/crop/crop",
+      "y": 90
+    },
+    "type\u003dcreative_generator,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/creative_generator",
+      "x": 90
+    },
+    "type\u003dcreative_generator,facing\u003dup": {
+      "model": "ic2:block/generator/electric/creative_generator",
+      "x": 270
+    },
+    "type\u003dcreative_generator,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/creative_generator"
+    },
+    "type\u003dcreative_generator,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/creative_generator",
+      "y": 180
+    },
+    "type\u003dcreative_generator,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/creative_generator",
+      "y": 270
+    },
+    "type\u003dcreative_generator,facing\u003deast": {
+      "model": "ic2:block/generator/electric/creative_generator",
+      "y": 90
+    },
+    "type\u003dcreative_generator_active,facing\u003ddown": {
+      "model": "ic2:block/generator/electric/creative_generator_active",
+      "x": 90
+    },
+    "type\u003dcreative_generator_active,facing\u003dup": {
+      "model": "ic2:block/generator/electric/creative_generator_active",
+      "x": 270
+    },
+    "type\u003dcreative_generator_active,facing\u003dnorth": {
+      "model": "ic2:block/generator/electric/creative_generator_active"
+    },
+    "type\u003dcreative_generator_active,facing\u003dsouth": {
+      "model": "ic2:block/generator/electric/creative_generator_active",
+      "y": 180
+    },
+    "type\u003dcreative_generator_active,facing\u003dwest": {
+      "model": "ic2:block/generator/electric/creative_generator_active",
+      "y": 270
+    },
+    "type\u003dcreative_generator_active,facing\u003deast": {
+      "model": "ic2:block/generator/electric/creative_generator_active",
+      "y": 90
+    },
+    "type\u003dsteam_repressurizer,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/steam_repressurizer",
+      "x": 90
+    },
+    "type\u003dsteam_repressurizer,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/steam_repressurizer",
+      "x": 270
+    },
+    "type\u003dsteam_repressurizer,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/steam_repressurizer"
+    },
+    "type\u003dsteam_repressurizer,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/steam_repressurizer",
+      "y": 180
+    },
+    "type\u003dsteam_repressurizer,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/steam_repressurizer",
+      "y": 270
+    },
+    "type\u003dsteam_repressurizer,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/steam_repressurizer",
+      "y": 90
+    },
+    "type\u003dsteam_repressurizer_active,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/steam_repressurizer_active",
+      "x": 90
+    },
+    "type\u003dsteam_repressurizer_active,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/steam_repressurizer_active",
+      "x": 270
+    },
+    "type\u003dsteam_repressurizer_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/steam_repressurizer_active"
+    },
+    "type\u003dsteam_repressurizer_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/steam_repressurizer_active",
+      "y": 180
+    },
+    "type\u003dsteam_repressurizer_active,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/steam_repressurizer_active",
+      "y": 270
+    },
+    "type\u003dsteam_repressurizer_active,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/steam_repressurizer_active",
+      "y": 90
+    },
+    "type\u003dindustrial_workbench,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/industrial_workbench",
+      "x": 90
+    },
+    "type\u003dindustrial_workbench,facing\u003dup": {
+      "model": "ic2:block/machine/misc/industrial_workbench",
+      "x": 270
+    },
+    "type\u003dindustrial_workbench,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/industrial_workbench"
+    },
+    "type\u003dindustrial_workbench,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/industrial_workbench",
+      "y": 180
+    },
+    "type\u003dindustrial_workbench,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/industrial_workbench",
+      "y": 270
+    },
+    "type\u003dindustrial_workbench,facing\u003deast": {
+      "model": "ic2:block/machine/misc/industrial_workbench",
+      "y": 90
+    },
+    "type\u003dbatch_crafter,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/batch_crafter",
+      "x": 90
+    },
+    "type\u003dbatch_crafter,facing\u003dup": {
+      "model": "ic2:block/machine/misc/batch_crafter",
+      "x": 270
+    },
+    "type\u003dbatch_crafter,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/batch_crafter"
+    },
+    "type\u003dbatch_crafter,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/batch_crafter",
+      "y": 180
+    },
+    "type\u003dbatch_crafter,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/batch_crafter",
+      "y": 270
+    },
+    "type\u003dbatch_crafter,facing\u003deast": {
+      "model": "ic2:block/machine/misc/batch_crafter",
+      "y": 90
+    },
+    "type\u003dbatch_crafter_active,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/batch_crafter_active",
+      "x": 90
+    },
+    "type\u003dbatch_crafter_active,facing\u003dup": {
+      "model": "ic2:block/machine/misc/batch_crafter_active",
+      "x": 270
+    },
+    "type\u003dbatch_crafter_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/batch_crafter_active"
+    },
+    "type\u003dbatch_crafter_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/batch_crafter_active",
+      "y": 180
+    },
+    "type\u003dbatch_crafter_active,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/batch_crafter_active",
+      "y": 270
+    },
+    "type\u003dbatch_crafter_active,facing\u003deast": {
+      "model": "ic2:block/machine/misc/batch_crafter_active",
+      "y": 90
+    },
+    "type\u003dweighted_fluid_distributor,facing\u003ddown": {
+      "model": "ic2:block/machine/fluid/weighted_fluid_distributor",
+      "x": 90
+    },
+    "type\u003dweighted_fluid_distributor,facing\u003dup": {
+      "model": "ic2:block/machine/fluid/weighted_fluid_distributor",
+      "x": 270
+    },
+    "type\u003dweighted_fluid_distributor,facing\u003dnorth": {
+      "model": "ic2:block/machine/fluid/weighted_fluid_distributor"
+    },
+    "type\u003dweighted_fluid_distributor,facing\u003dsouth": {
+      "model": "ic2:block/machine/fluid/weighted_fluid_distributor",
+      "y": 180
+    },
+    "type\u003dweighted_fluid_distributor,facing\u003dwest": {
+      "model": "ic2:block/machine/fluid/weighted_fluid_distributor",
+      "y": 270
+    },
+    "type\u003dweighted_fluid_distributor,facing\u003deast": {
+      "model": "ic2:block/machine/fluid/weighted_fluid_distributor",
+      "y": 90
+    },
+    "type\u003dweighted_item_distributor,facing\u003ddown": {
+      "model": "ic2:block/machine/misc/weighted_item_distributor",
+      "x": 90
+    },
+    "type\u003dweighted_item_distributor,facing\u003dup": {
+      "model": "ic2:block/machine/misc/weighted_item_distributor",
+      "x": 270
+    },
+    "type\u003dweighted_item_distributor,facing\u003dnorth": {
+      "model": "ic2:block/machine/misc/weighted_item_distributor"
+    },
+    "type\u003dweighted_item_distributor,facing\u003dsouth": {
+      "model": "ic2:block/machine/misc/weighted_item_distributor",
+      "y": 180
+    },
+    "type\u003dweighted_item_distributor,facing\u003dwest": {
+      "model": "ic2:block/machine/misc/weighted_item_distributor",
+      "y": 270
+    },
+    "type\u003dweighted_item_distributor,facing\u003deast": {
+      "model": "ic2:block/machine/misc/weighted_item_distributor",
+      "y": 90
+    },
+    "type\u003dmass_fabricator,facing\u003ddown": {
+      "model": "ic2:block/machine/uu/mass_fabricator",
+      "x": 90
+    },
+    "type\u003dmass_fabricator,facing\u003dup": {
+      "model": "ic2:block/machine/uu/mass_fabricator",
+      "x": 270
+    },
+    "type\u003dmass_fabricator,facing\u003dnorth": {
+      "model": "ic2:block/machine/uu/mass_fabricator"
+    },
+    "type\u003dmass_fabricator,facing\u003dsouth": {
+      "model": "ic2:block/machine/uu/mass_fabricator",
+      "y": 180
+    },
+    "type\u003dmass_fabricator,facing\u003dwest": {
+      "model": "ic2:block/machine/uu/mass_fabricator",
+      "y": 270
+    },
+    "type\u003dmass_fabricator,facing\u003deast": {
+      "model": "ic2:block/machine/uu/mass_fabricator",
+      "y": 90
+    },
+    "type\u003dmass_fabricator_active,facing\u003ddown": {
+      "model": "ic2:block/machine/uu/mass_fabricator_active",
+      "x": 90
+    },
+    "type\u003dmass_fabricator_active,facing\u003dup": {
+      "model": "ic2:block/machine/uu/mass_fabricator_active",
+      "x": 270
+    },
+    "type\u003dmass_fabricator_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/uu/mass_fabricator_active"
+    },
+    "type\u003dmass_fabricator_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/uu/mass_fabricator_active",
+      "y": 180
+    },
+    "type\u003dmass_fabricator_active,facing\u003dwest": {
+      "model": "ic2:block/machine/uu/mass_fabricator_active",
+      "y": 270
+    },
+    "type\u003dmass_fabricator_active,facing\u003deast": {
+      "model": "ic2:block/machine/uu/mass_fabricator_active",
+      "y": 90
+    },
+    "type\u003duu_assembly_bench,facing\u003ddown": {
+      "model": "ic2:block/machine/uu/uu_assembly_bench",
+      "x": 90
+    },
+    "type\u003duu_assembly_bench,facing\u003dup": {
+      "model": "ic2:block/machine/uu/uu_assembly_bench",
+      "x": 270
+    },
+    "type\u003duu_assembly_bench,facing\u003dnorth": {
+      "model": "ic2:block/machine/uu/uu_assembly_bench"
+    },
+    "type\u003duu_assembly_bench,facing\u003dsouth": {
+      "model": "ic2:block/machine/uu/uu_assembly_bench",
+      "y": 180
+    },
+    "type\u003duu_assembly_bench,facing\u003dwest": {
+      "model": "ic2:block/machine/uu/uu_assembly_bench",
+      "y": 270
+    },
+    "type\u003duu_assembly_bench,facing\u003deast": {
+      "model": "ic2:block/machine/uu/uu_assembly_bench",
+      "y": 90
+    },
+    "type\u003duu_assembly_bench_active,facing\u003ddown": {
+      "model": "ic2:block/machine/uu/uu_assembly_bench_active",
+      "x": 90
+    },
+    "type\u003duu_assembly_bench_active,facing\u003dup": {
+      "model": "ic2:block/machine/uu/uu_assembly_bench_active",
+      "x": 270
+    },
+    "type\u003duu_assembly_bench_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/uu/uu_assembly_bench_active"
+    },
+    "type\u003duu_assembly_bench_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/uu/uu_assembly_bench_active",
+      "y": 180
+    },
+    "type\u003duu_assembly_bench_active,facing\u003dwest": {
+      "model": "ic2:block/machine/uu/uu_assembly_bench_active",
+      "y": 270
+    },
+    "type\u003duu_assembly_bench_active,facing\u003deast": {
+      "model": "ic2:block/machine/uu/uu_assembly_bench_active",
+      "y": 90
+    },
+    "type\u003dcoke_kiln,facing\u003ddown": {
+      "model": "ic2:block/machine/steam/coke_kiln",
+      "uvlock": true,
+      "x": 90
+    },
+    "type\u003dcoke_kiln,facing\u003dup": {
+      "model": "ic2:block/machine/steam/coke_kiln",
+      "uvlock": true,
+      "x": 270
+    },
+    "type\u003dcoke_kiln,facing\u003dnorth": {
+      "model": "ic2:block/machine/steam/coke_kiln",
+      "uvlock": true
+    },
+    "type\u003dcoke_kiln,facing\u003dsouth": {
+      "model": "ic2:block/machine/steam/coke_kiln",
+      "uvlock": true,
+      "y": 180
+    },
+    "type\u003dcoke_kiln,facing\u003dwest": {
+      "model": "ic2:block/machine/steam/coke_kiln",
+      "uvlock": true,
+      "y": 270
+    },
+    "type\u003dcoke_kiln,facing\u003deast": {
+      "model": "ic2:block/machine/steam/coke_kiln",
+      "uvlock": true,
+      "y": 90
+    },
+    "type\u003dcoke_kiln_active,facing\u003ddown": {
+      "model": "ic2:block/machine/steam/coke_kiln_active",
+      "uvlock": true,
+      "x": 90
+    },
+    "type\u003dcoke_kiln_active,facing\u003dup": {
+      "model": "ic2:block/machine/steam/coke_kiln_active",
+      "uvlock": true,
+      "x": 270
+    },
+    "type\u003dcoke_kiln_active,facing\u003dnorth": {
+      "model": "ic2:block/machine/steam/coke_kiln_active",
+      "uvlock": true
+    },
+    "type\u003dcoke_kiln_active,facing\u003dsouth": {
+      "model": "ic2:block/machine/steam/coke_kiln_active",
+      "uvlock": true,
+      "y": 180
+    },
+    "type\u003dcoke_kiln_active,facing\u003dwest": {
+      "model": "ic2:block/machine/steam/coke_kiln_active",
+      "uvlock": true,
+      "y": 270
+    },
+    "type\u003dcoke_kiln_active,facing\u003deast": {
+      "model": "ic2:block/machine/steam/coke_kiln_active",
+      "uvlock": true,
+      "y": 90
+    },
+    "type\u003dcoke_kiln_hatch,facing\u003ddown": {
+      "model": "ic2:block/machine/steam/coke_kiln_hatch",
+      "uvlock": true,
+      "x": 90
+    },
+    "type\u003dcoke_kiln_hatch,facing\u003dup": {
+      "model": "ic2:block/machine/steam/coke_kiln_hatch",
+      "uvlock": true,
+      "x": 270
+    },
+    "type\u003dcoke_kiln_hatch,facing\u003dnorth": {
+      "model": "ic2:block/machine/steam/coke_kiln_hatch",
+      "uvlock": true
+    },
+    "type\u003dcoke_kiln_hatch,facing\u003dsouth": {
+      "model": "ic2:block/machine/steam/coke_kiln_hatch",
+      "uvlock": true,
+      "y": 180
+    },
+    "type\u003dcoke_kiln_hatch,facing\u003dwest": {
+      "model": "ic2:block/machine/steam/coke_kiln_hatch",
+      "uvlock": true,
+      "y": 270
+    },
+    "type\u003dcoke_kiln_hatch,facing\u003deast": {
+      "model": "ic2:block/machine/steam/coke_kiln_hatch",
+      "uvlock": true,
+      "y": 90
+    },
+    "type\u003dcoke_kiln_grate,facing\u003ddown": {
+      "model": "ic2:block/machine/steam/coke_kiln_grate",
+      "uvlock": true,
+      "x": 90
+    },
+    "type\u003dcoke_kiln_grate,facing\u003dup": {
+      "model": "ic2:block/machine/steam/coke_kiln_grate",
+      "uvlock": true,
+      "x": 270
+    },
+    "type\u003dcoke_kiln_grate,facing\u003dnorth": {
+      "model": "ic2:block/machine/steam/coke_kiln_grate",
+      "uvlock": true
+    },
+    "type\u003dcoke_kiln_grate,facing\u003dsouth": {
+      "model": "ic2:block/machine/steam/coke_kiln_grate",
+      "uvlock": true,
+      "y": 180
+    },
+    "type\u003dcoke_kiln_grate,facing\u003dwest": {
+      "model": "ic2:block/machine/steam/coke_kiln_grate",
+      "uvlock": true,
+      "y": 270
+    },
+    "type\u003dcoke_kiln_grate,facing\u003deast": {
+      "model": "ic2:block/machine/steam/coke_kiln_grate",
+      "uvlock": true,
+      "y": 90
+    },
+    "type\u003dwooden_storage_box,facing\u003ddown": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "x": 90
+    },
+    "type\u003dwooden_storage_box,facing\u003dup": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "x": 270
+    },
+    "type\u003dwooden_storage_box,facing\u003dnorth": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true
+    },
+    "type\u003dwooden_storage_box,facing\u003dsouth": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "y": 180
+    },
+    "type\u003dwooden_storage_box,facing\u003dwest": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "y": 270
+    },
+    "type\u003dwooden_storage_box,facing\u003deast": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "y": 90
+    },
+    "type\u003diron_storage_box,facing\u003ddown": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "x": 90
+    },
+    "type\u003diron_storage_box,facing\u003dup": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "x": 270
+    },
+    "type\u003diron_storage_box,facing\u003dnorth": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true
+    },
+    "type\u003diron_storage_box,facing\u003dsouth": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "y": 180
+    },
+    "type\u003diron_storage_box,facing\u003dwest": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "y": 270
+    },
+    "type\u003diron_storage_box,facing\u003deast": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "y": 90
+    },
+    "type\u003dbronze_storage_box,facing\u003ddown": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "x": 90
+    },
+    "type\u003dbronze_storage_box,facing\u003dup": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "x": 270
+    },
+    "type\u003dbronze_storage_box,facing\u003dnorth": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true
+    },
+    "type\u003dbronze_storage_box,facing\u003dsouth": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "y": 180
+    },
+    "type\u003dbronze_storage_box,facing\u003dwest": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "y": 270
+    },
+    "type\u003dbronze_storage_box,facing\u003deast": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "y": 90
+    },
+    "type\u003dsteel_storage_box,facing\u003ddown": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "x": 90
+    },
+    "type\u003dsteel_storage_box,facing\u003dup": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "x": 270
+    },
+    "type\u003dsteel_storage_box,facing\u003dnorth": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true
+    },
+    "type\u003dsteel_storage_box,facing\u003dsouth": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "y": 180
+    },
+    "type\u003dsteel_storage_box,facing\u003dwest": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "y": 270
+    },
+    "type\u003dsteel_storage_box,facing\u003deast": {
+      "model": "ic2:block/storage_box",
+      "uvlock": true,
+      "y": 90
+    },
+    "type\u003diridium_storage_box,facing\u003ddown": {
+      "model": "ic2:block/iridium_storage_box",
+      "uvlock": true,
+      "x": 90
+    },
+    "type\u003diridium_storage_box,facing\u003dup": {
+      "model": "ic2:block/iridium_storage_box",
+      "uvlock": true,
+      "x": 270
+    },
+    "type\u003diridium_storage_box,facing\u003dnorth": {
+      "model": "ic2:block/iridium_storage_box",
+      "uvlock": true
+    },
+    "type\u003diridium_storage_box,facing\u003dsouth": {
+      "model": "ic2:block/iridium_storage_box",
+      "uvlock": true,
+      "y": 180
+    },
+    "type\u003diridium_storage_box,facing\u003dwest": {
+      "model": "ic2:block/iridium_storage_box",
+      "uvlock": true,
+      "y": 270
+    },
+    "type\u003diridium_storage_box,facing\u003deast": {
+      "model": "ic2:block/iridium_storage_box",
+      "uvlock": true,
+      "y": 90
+    },
+    "type\u003dbronze_tank,facing\u003ddown": {
+      "model": "ic2:block/bronze_tank",
+      "uvlock": true,
+      "x": 90
+    },
+    "type\u003dbronze_tank,facing\u003dup": {
+      "model": "ic2:block/bronze_tank",
+      "uvlock": true,
+      "x": 270
+    },
+    "type\u003dbronze_tank,facing\u003dnorth": {
+      "model": "ic2:block/bronze_tank",
+      "uvlock": true
+    },
+    "type\u003dbronze_tank,facing\u003dsouth": {
+      "model": "ic2:block/bronze_tank",
+      "uvlock": true,
+      "y": 180
+    },
+    "type\u003dbronze_tank,facing\u003dwest": {
+      "model": "ic2:block/bronze_tank",
+      "uvlock": true,
+      "y": 270
+    },
+    "type\u003dbronze_tank,facing\u003deast": {
+      "model": "ic2:block/bronze_tank",
+      "uvlock": true,
+      "y": 90
+    },
+    "type\u003diron_tank,facing\u003ddown": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "x": 90
+    },
+    "type\u003diron_tank,facing\u003dup": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "x": 270
+    },
+    "type\u003diron_tank,facing\u003dnorth": {
+      "model": "ic2:block/tank",
+      "uvlock": true
+    },
+    "type\u003diron_tank,facing\u003dsouth": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "y": 180
+    },
+    "type\u003diron_tank,facing\u003dwest": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "y": 270
+    },
+    "type\u003diron_tank,facing\u003deast": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "y": 90
+    },
+    "type\u003dsteel_tank,facing\u003ddown": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "x": 90
+    },
+    "type\u003dsteel_tank,facing\u003dup": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "x": 270
+    },
+    "type\u003dsteel_tank,facing\u003dnorth": {
+      "model": "ic2:block/tank",
+      "uvlock": true
+    },
+    "type\u003dsteel_tank,facing\u003dsouth": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "y": 180
+    },
+    "type\u003dsteel_tank,facing\u003dwest": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "y": 270
+    },
+    "type\u003dsteel_tank,facing\u003deast": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "y": 90
+    },
+    "type\u003diridium_tank,facing\u003ddown": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "x": 90
+    },
+    "type\u003diridium_tank,facing\u003dup": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "x": 270
+    },
+    "type\u003diridium_tank,facing\u003dnorth": {
+      "model": "ic2:block/tank",
+      "uvlock": true
+    },
+    "type\u003diridium_tank,facing\u003dsouth": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "y": 180
+    },
+    "type\u003diridium_tank,facing\u003dwest": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "y": 270
+    },
+    "type\u003diridium_tank,facing\u003deast": {
+      "model": "ic2:block/tank",
+      "uvlock": true,
+      "y": 90
+    },
+    "type\u003dfluid_pipe,facing\u003ddown": {
+      "model": "ic2:block/transport/item_pipe",
+      "x": 90
+    },
+    "type\u003dfluid_pipe,facing\u003dup": {
+      "model": "ic2:block/transport/item_pipe",
+      "x": 270
+    },
+    "type\u003dfluid_pipe,facing\u003dnorth": {
+      "model": "ic2:block/transport/item_pipe"
+    },
+    "type\u003dfluid_pipe,facing\u003dsouth": {
+      "model": "ic2:block/transport/item_pipe",
+      "y": 180
+    },
+    "type\u003dfluid_pipe,facing\u003dwest": {
+      "model": "ic2:block/transport/item_pipe",
+      "y": 270
+    },
+    "type\u003dfluid_pipe,facing\u003deast": {
+      "model": "ic2:block/transport/item_pipe",
+      "y": 90
+    }
+  }
+}

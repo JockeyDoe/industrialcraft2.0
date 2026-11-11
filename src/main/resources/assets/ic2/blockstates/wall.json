@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "type\u003dblack": {
+      "model": "ic2:block/cf/wall_black"
+    },
+    "type\u003dblue": {
+      "model": "ic2:block/cf/wall_blue"
+    },
+    "type\u003dbrown": {
+      "model": "ic2:block/cf/wall_brown"
+    },
+    "type\u003dcyan": {
+      "model": "ic2:block/cf/wall_cyan"
+    },
+    "type\u003dgray": {
+      "model": "ic2:block/cf/wall_gray"
+    },
+    "type\u003dgreen": {
+      "model": "ic2:block/cf/wall_green"
+    },
+    "type\u003dlight_blue": {
+      "model": "ic2:block/cf/wall_light_blue"
+    },
+    "type\u003dlight_gray": {
+      "model": "ic2:block/cf/wall_light_gray"
+    },
+    "type\u003dlime": {
+      "model": "ic2:block/cf/wall_lime"
+    },
+    "type\u003dmagenta": {
+      "model": "ic2:block/cf/wall_magenta"
+    },
+    "type\u003dorange": {
+      "model": "ic2:block/cf/wall_orange"
+    },
+    "type\u003dpink": {
+      "model": "ic2:block/cf/wall_pink"
+    },
+    "type\u003dpurple": {
+      "model": "ic2:block/cf/wall_purple"
+    },
+    "type\u003dred": {
+      "model": "ic2:block/cf/wall_red"
+    },
+    "type\u003dwhite": {
+      "model": "ic2:block/cf/wall_white"
+    },
+    "type\u003dyellow": {
+      "model": "ic2:block/cf/wall_yellow"
+    }
+  }
+}

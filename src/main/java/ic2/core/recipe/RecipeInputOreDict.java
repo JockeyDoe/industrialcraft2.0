@@ -1,0 +1,113 @@
+package ic2.core.recipe;
+
+import ic2.api.recipe.IRecipeInput;
+import ic2.core.util.ItemStacks;
+import ic2.core.util.StackUtil;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+
+public class RecipeInputOreDict extends RecipeInputBase implements IRecipeInput {
+   public final String input;
+   public final int amount;
+   public final Integer meta;
+   private List<ItemStack> ores;
+
+   RecipeInputOreDict(String input) {
+      this(input, 1);
+   }
+
+   RecipeInputOreDict(String input, int amount) {
+      this(input, amount, null);
+   }
+
+   RecipeInputOreDict(String input, int amount, Integer meta) {
+      this.input = input;
+      this.amount = amount;
+      this.meta = meta;
+   }
+
+   @Override
+   public boolean matches(ItemStack subject) {
+      List<ItemStack> inputs = this.getOres();
+      boolean useOreStackMeta = this.meta == null;
+      Item subjectItem = subject.getItem();
+      int subjectMeta = ItemStacks.rawMeta(subject);
+
+      for (ItemStack oreStack : inputs) {
+         Item oreItem = oreStack.getItem();
+         if (oreItem != null) {
+            int metaRequired = useOreStackMeta ? ItemStacks.rawMeta(oreStack) : this.meta;
+            if (subjectItem == oreItem && (subjectMeta == metaRequired || metaRequired == 32767)) {
+               return true;
+            }
+         }
+      }
+
+      return false;
+   }
+
+   @Override
+   public int getAmount() {
+      return this.amount;
+   }
+
+   @Override
+   public List<ItemStack> getInputs() {
+      List<ItemStack> ores = this.getOres();
+      boolean hasUnsuitableEntries = false;
+
+      for (ItemStack stack : ores) {
+         if (StackUtil.getSize(stack) != this.getAmount()) {
+            hasUnsuitableEntries = true;
+            break;
+         }
+      }
+
+      if (!hasUnsuitableEntries) {
+         return ores;
+      } else {
+         List<ItemStack> ret = new ArrayList<>(ores.size());
+
+         for (ItemStack stackx : ores) {
+            if (stackx.getItem() != null) {
+               if (StackUtil.getSize(stackx) != this.getAmount()) {
+                  stackx = StackUtil.copyWithSize(stackx, this.getAmount());
+               }
+
+               ret.add(stackx);
+            }
+         }
+
+         return Collections.unmodifiableList(ret);
+      }
+   }
+
+   @Override
+   public String toString() {
+      return this.meta == null
+         ? "RInputOreDict<" + this.amount + "x" + this.input + ">"
+         : "RInputOreDict<" + this.amount + "x" + this.input + "@" + this.meta + ">";
+   }
+
+   @Override
+   public boolean equals(Object obj) {
+      RecipeInputOreDict other;
+      if (obj != null && this.getClass() == obj.getClass() && this.input.equals((other = (RecipeInputOreDict)obj).input) && other.amount == this.amount) {
+         return this.meta == null ? other.meta == null : this.meta == other.meta;
+      } else {
+         return false;
+      }
+   }
+
+   private List<ItemStack> getOres() {
+      List<ItemStack> ret = RecipeTags.getOres(this.input);
+      if (ret != RecipeTags.EMPTY_LIST) {
+         this.ores = ret;
+      }
+
+      return ret;
+   }
+}
